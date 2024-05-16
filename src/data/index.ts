@@ -104,6 +104,7 @@ export const certifications = [
       "Scalable Infrastructure",
       "Production and Deployment",
     ],
+    id: "1"
   },
   {
     title: "Modern React with Redux",
@@ -117,6 +118,7 @@ export const certifications = [
       "Fundamentals concepts behind React and Redux including JSX, state, and props",
       "NPM, Webpack, Babel, and ES6/ES2015 Javascript syntax",
     ],
+    id: "2"
   },
   {
     title: "Python and Django Full Stack Web Developer Bootcamp",
@@ -142,6 +144,7 @@ export const certifications = [
       "REST APIs",
       "User Authentication",
     ],
+    id: "3"
   },
   {
     title: "Advanced CSS and Sass",
@@ -163,6 +166,7 @@ export const certifications = [
       "Flexbox layouts: main concepts, introduction to both flex container and flex item-specific properties",
       "CSS Grid layouts: main concepts, CSS grid vs flexbox, and layout techniques applied to a real-world project",
     ],
+    id: "4"
   },
   {
     title: "Responsive Web Design",
@@ -178,6 +182,7 @@ export const certifications = [
       "CSS Box model, Flexbox, Grid, Animations, Typography, Pseudo selectors",
       "Responsive design principles",
     ],
+    id: "5"
   },
   {
     title: "JavaScript Algorithms and Data Structures",
@@ -198,6 +203,7 @@ export const certifications = [
       "Functional Programming is another popular approach to software development",
       "Intermediate Algorithm Scripting",
     ],
+    id: "6"
   },
   {
     title: "Front-End Development Libraries",
@@ -215,6 +221,7 @@ export const certifications = [
       "Redux is defined as a 'predictable state container for JavaScript apps' that helps ensure your apps work predictably, and are easier to test.",
       "React and Redux are often mentioned together, and with good reason.",
     ],
+    id: "7"
   },
   {
     title: "HTML and CSS in depth",
@@ -225,6 +232,7 @@ export const certifications = [
     tags: "",
     showSkills: false,
     skills: [""],
+    id: "8"
   },
   {
     title: "Programming with JavaScript",
@@ -235,6 +243,7 @@ export const certifications = [
     tags: "",
     showSkills: false,
     skills: [""],
+    id: "9"
   },
   {
     title: "Version Control",
@@ -245,6 +254,7 @@ export const certifications = [
     tags: "",
     showSkills: false,
     skills: [""],
+    id: "10"
   },
   {
     title: "React Basics",
@@ -255,6 +265,7 @@ export const certifications = [
     tags: "",
     showSkills: false,
     skills: [""],
+    id: "11"
   },
   {
     title: "Advanced React",
@@ -265,6 +276,7 @@ export const certifications = [
     tags: "",
     showSkills: false,
     skills: [""],
+    id: "12"
   },
   {
     title: "Principles of UX/UI Design",
@@ -275,6 +287,7 @@ export const certifications = [
     tags: "",
     showSkills: false,
     skills: [""],
+    id: "13"
   },
 ];
 

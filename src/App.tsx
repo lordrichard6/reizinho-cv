@@ -1,12 +1,16 @@
-// import { useState } from 'react'
+import { FC, HTMLAttributes, useEffect, useState } from "react";
+import { AnimatePresence, motion } from 'framer-motion';
 import { Link } from 'react-scroll';
+
+import { SlClose } from "react-icons/sl";
 
 import './globals.scss'
 import { certifications, socialMedia, contact } from './data'
 
 import paulo_header from './assets/img/paulo_main.png'
 
-function App() {
+const App = () => {
+  const [selectedId, setSelectedId] = useState<string | null>(null)
 
   return (
     <>
@@ -54,14 +58,17 @@ function App() {
         <h1 className='mb-'>Education</h1>
 
         <div className="flex-centered flex-col h-full w-full mb-10">
+
           <div className="flex-centered gap-2 mb-4 lg:mb-10">
             <hr className='w-20 lg:w-40' />
             <h2>Degrees</h2>
             <hr className='w-20 lg:w-40' />
           </div>
+
           <div className='bg-[#262A2D] px-6 py-6 rounded-xl'>
             <h4 className='w-[200px] text-center'>Management and Administration</h4>
           </div>
+
         </div>
 
         <div className="flex-centered flex-col h-full">
@@ -73,12 +80,32 @@ function App() {
           <div className="grid lg:grid-cols-4 gap-4 mt-10">
             {certifications.map((cert) => {
               return (
-                <div className='bg-[#262A2D] px-6 py-6 rounded-xl flex-centered standart-animation standart-hover'>
-                  <h4 className='w-[200px] text-center'>{cert.title}</h4>
-                </div>
+                <>
+                  <motion.div key={cert.id} onClick={() => setSelectedId(cert.id)} layoutId={cert.id} className='bg-[#262A2D] px-6 py-6 rounded-xl flex-centered standart-animation standart-hover z-0'>
+                    <motion.h4 className='w-[200px] text-center'>{cert.title}</motion.h4>
+                  </motion.div>
+                  <AnimatePresence>
+                    {selectedId === cert.id && (
+                      <motion.div layoutId={selectedId} className="fixed top-[5%] left-0 lg:left-1/3 flex-centered z-40">
+                        <motion.div onClick={() => setSelectedId(null)} className="overlay absolute-center fixed w-screen h-screen bg-[#262A2D] backdrop-blur-md opacity-80" />
+                        <motion.div className='bg-dark-color-02 max-w-[360px] lg:max-w-[800px] min-h-[500px] opacity-100 z-50 rounded-xl p-10 mx-4'>
+                          <SlClose onClick={() => setSelectedId(null)} className='text-light-color-01 standart-hover standart-animation text-4xl absolute top-0 right-0 my-4 mx-6' />
+                          <motion.h4 className='text-center mt-4'>{cert.title}</motion.h4>
+                          <motion.ul className="list-disc">
+                            {cert.skills.map((skill) => {
+                              return (
+                                <motion.li className="text-light-color-01"><p className="text-sm leading-normal lg:text-[24px] font-light">{skill}</p></motion.li>
+                              )
+                            })}
+                          </motion.ul>
+                        </motion.div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </>
+
               )
             })}
-
           </div>
         </div>
       </section>

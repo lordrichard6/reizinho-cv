@@ -21,3 +21,7 @@
 .standart-hover {
   @apply cursor-pointer drop-shadow-md hover:drop-shadow-xl hover:-translate-y-2 active:drop-shadow active:translate-y-1;
 }
+
+.absolute-center {
+  @apply absolute top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%] flex justify-center items-center;
+}
