@@ -50,7 +50,7 @@ export const contact = [
   {
     contact: "+41 078 798 95 33",
     icon: LuPhoneCall,
-    link: "https://wa.link/sru6m7",
+    link: "tel: +41787989533",
   },
   {
     contact: "paulolopesreizinho@gmail.com",

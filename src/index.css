@@ -100,11 +100,11 @@ h3 {
 }
 
 h4 {
-    @apply text-2xl leading-snug lg:text-[24px];
+    @apply text-xl leading-snug lg:text-[24px];
 }
 
 p {
-    @apply text-xl leading-normal lg:text-[24px] font-light;
+    @apply text-lg leading-normal lg:text-[24px] font-light;
 }
 
 strong {

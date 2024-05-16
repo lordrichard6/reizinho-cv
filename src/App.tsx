@@ -1,4 +1,4 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import { Link } from 'react-scroll';
 
 import './globals.scss'
@@ -23,11 +23,12 @@ function App() {
         </div>
         <hr />
       </header>
-      {/* <section id="contact" className='contact-section flex-centered min-h-[60vh] w-full bg-light-color-02 text-[#262A2D]'>
-        <div className="section-width-default flex justify-around">
+
+      <section id="contact" className='contact-section flex-centered h-full min-h-screen lg:min-h-[60vh] w-full bg-light-color-02 text-[#262A2D]'>
+        <div className="section-width-default h-full flex flex-col gap-10 lg:flex-row justify-center lg:justify-around items-center">
           <div className="flex flex-col justify-center gap-4">
-            <h1 className=''>Contact</h1>
-            <p className='w-[600px]'>I was born and raised in <strong>Portugal</strong> but ambition and the love for cheese brought me to Switzerland, more specifically in <strong>Zurich</strong>. I have a <strong>degree in Administration</strong>, accounting experience, sales experience and work in gastro and transportation fields but those who know me know that I have had a <strong>great passion</strong> for everything digital from childhood on.</p>
+            <h1 className='text-center'>Contact</h1>
+            <p className='max-w-[600px]'>I was born and raised in <strong>Portugal</strong> but ambition and the love for cheese brought me to Switzerland, more specifically in <strong>Zurich</strong>. I have a <strong>degree in Administration</strong>, accounting experience, sales experience and work in gastro and transportation fields but those who know me know that I have had a <strong>great passion</strong> for everything digital from childhood on.</p>
           </div>
 
           <div className="flex flex-col gap-6">
@@ -47,27 +48,29 @@ function App() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
-      {/* <section className='education-section flex items-center justify-around flex-col min-h-screen bg-dark-color-01 text-light-color-01'>
-        <h1 className=''>Education</h1>
-        <div className="flex-centered flex-col h-full w-full">
-          <div className="flex-centered gap-2">
-            <hr className='w-40' />
+      <section className='education-section py-10 flex items-center justify-around flex-col min-h-screen bg-dark-color-01 text-light-color-01'>
+        <h1 className='mb-'>Education</h1>
+
+        <div className="flex-centered flex-col h-full w-full mb-10">
+          <div className="flex-centered gap-2 mb-4 lg:mb-10">
+            <hr className='w-20 lg:w-40' />
             <h2>Degrees</h2>
-            <hr className='w-40' />
+            <hr className='w-20 lg:w-40' />
           </div>
-          <div className='bg-[#262A2D] px-6 py-6 rounded-xl mt-10'>
+          <div className='bg-[#262A2D] px-6 py-6 rounded-xl'>
             <h4 className='w-[200px] text-center'>Management and Administration</h4>
           </div>
         </div>
+
         <div className="flex-centered flex-col h-full">
           <div className="flex-centered gap-2">
-            <hr className='w-40' />
+            <hr className='w-20 lg:w-40' />
             <h2>Certificates</h2>
-            <hr className='w-40' />
+            <hr className='w-20 lg:w-40' />
           </div>
-          <div className="grid grid-cols-4 gap-4 mt-10">
+          <div className="grid lg:grid-cols-4 gap-4 mt-10">
             {certifications.map((cert) => {
               return (
                 <div className='bg-[#262A2D] px-6 py-6 rounded-xl flex-centered standart-animation standart-hover'>
@@ -78,11 +81,11 @@ function App() {
 
           </div>
         </div>
-      </section> */}
+      </section>
 
-      {/* <section className='skills-section flex-centered flex-col min-h-[60vh] bg-light-color-01 text-light-color-01'>
+      <section className='skills-section flex-centered py-10 flex-col min-h-[60vh] bg-light-color-01 text-light-color-01'>
         <h1 className='text-dark-color-01 mb-10'>Skills</h1>
-        <div className="flex-centered gap-6">
+        <div className="flex-centered flex-col lg:flex-row gap-6">
           <div className="w-[350px] h-[514px] bg-[#879EAD] rounded-lg flex-centered">
             <h2>Frontend</h2>
           </div>
@@ -97,11 +100,11 @@ function App() {
           </div>
         </div>
 
-      </section> */}
-
-      <section className='min-h-[60vh] bg-light-color-02'>
-
       </section>
+
+      {/* <section className='min-h-[60vh] bg-light-color-02'>
+
+      </section> */}
       <section className='min-h-[60vh] bg-beje-color'>
 
       </section>
