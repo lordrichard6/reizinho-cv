@@ -5,10 +5,13 @@ import { Link } from 'react-scroll';
 import { SlClose } from "react-icons/sl";
 
 import './globals.scss'
-import { certifications, socialMedia, contact, skills } from './data'
+import { certifications, socialMedia, contact, skills, workExp, projects } from './data'
 
 import paulo_header from './assets/img/paulo_main.png'
 import SkillCard from "./components/SkillCard";
+import TimelineItem from "./components/TimeLineItem";
+import ProjectCard from "./components/ProjectCard";
+
 
 const App: React.FC = () => {
   const [selectedId, setSelectedId] = useState<string | null>(null)
@@ -21,7 +24,7 @@ const App: React.FC = () => {
         className="scroll-progress fixed top-0 w-screen h-4 bg-[#1A5866] z-50"
         style={{ scaleX: scrollYProgress }}
       />
-      <header className='min-h-screen flex-centered'>
+      <header className='min-h-screen flex-centered pb-20'>
         <div className="section-width-default flex flex-col gap-4 lg:flex-row justify-between h-full">
           <div className=" flex justify-center flex-col max-w-[500px] gap-4 lg:gap-9 order-2">
             <h1>Hi, I'm Paulo</h1>
@@ -35,7 +38,7 @@ const App: React.FC = () => {
         <hr />
       </header>
 
-      <section id="contact" className='contact-section flex-centered h-full min-h-screen lg:min-h-[60vh] w-full bg-light-color-02 text-[#262A2D]'>
+      <section id="contact" className='contact-section flex-centered h-full min-h-screen lg:min-h-[60vh] w-full bg-light-color-02 text-[#262A2D] py-20'>
         <div className="section-width-default h-full flex flex-col gap-10 lg:flex-row justify-center lg:justify-around items-center">
           <div className="flex flex-col justify-center gap-4">
             <h1 className='text-center'>Contact</h1>
@@ -61,7 +64,7 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      <section className='education-section py-10 flex items-center justify-around flex-col min-h-screen bg-dark-color-01 text-light-color-01'>
+      <section className='education-section flex items-center justify-around flex-col min-h-screen bg-dark-color-01 text-light-color-01 py-20'>
         <h1 className='mb-'>Education</h1>
 
         <div className="flex-centered flex-col h-full w-full mb-10">
@@ -121,7 +124,7 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      <section className='skills-section flex-centered py-10 flex-col min-h-[60vh] bg-light-color-01 text-light-color-01'>
+      <section className='skills-section flex-centered flex-col min-h-[60vh] bg-light-color-01 text-light-color-01 py-20'>
         <h1 className='text-dark-color-01 mb-10'>Skills</h1>
         <div style={{ perspective: '1000px' }} className="flex-centered flex-col lg:flex-row gap-6">
           {skills.map((skill) => {
@@ -139,11 +142,65 @@ const App: React.FC = () => {
 
       </section>
 
-      {/* <section className='min-h-[60vh] bg-light-color-02'>
+      <section className='experience-section min-h-screen flex flex-col bg-light-color-02 py-20'>
+        <h1 className='text-dark-color-01 mb-10 text-center'>Profissional Experience</h1>
+        <div className="relative">
+          {
+            workExp.length > 0 && (
+              <div className="timeline-container">
+                {workExp.map((data, idx) => (
+                  <TimelineItem data={data} key={idx} />
+                ))}
+              </div>
+            )
+          }
+        </div>
 
-      </section> */}
-      <section className='min-h-[60vh] bg-beje-color'>
+      </section>
 
+      <section className='projects-section flex flex-col items-center justify-evenly min-h-[60vh] bg-beje-color py-20'>
+        <h1 className='text-light-color-02 mb-10 text-center'>Projects</h1>
+        <div className="section-width-default flex justify-evenly">
+          <div className="personal w-1/2">
+            <h2 className='text-light-color-02 text-center mb-6'>Personal</h2>
+            <div className="flex flex-wrap gap-6 text-light-color-02 text-center">
+              {projects
+                .filter(proj => proj.type === "personal")
+                .map((proj) => (
+                  <ProjectCard
+                    key={proj.title}
+                    name={proj.title}
+                    type={proj.type}
+                    tags={proj.tags}
+                    img={proj.image}
+                    alt={proj.alt}
+                    project_type={proj.project_type}
+                    link={proj.link}
+                  />
+              ))}
+
+            </div>
+          </div>
+          <div className="profissional w-1/2">
+            <h2 className='text-light-color-02 text-center mb-6'>Profissional</h2>
+            <div className="flex flex-wrap gap-6 text-light-color-02 text-center">
+            {projects
+                .filter(proj => proj.type === "profissional")
+                .map((proj) => (
+                  <ProjectCard
+                    key={proj.title}
+                    name={proj.title}
+                    type={proj.type}
+                    tags={proj.tags}
+                    img={proj.image}
+                    alt={proj.alt}
+                    project_type={proj.project_type}
+                    link={proj.link}
+                  />
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
       <section className='min-h-[60vh] bg-dark-color-01'>
 

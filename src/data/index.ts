@@ -9,6 +9,22 @@ import { SiSitepoint, SiJavascript, SiTypescript, SiJquery, SiReact, SiNextdotjs
 import { AiOutlineConsoleSql, AiOutlineHtml5 } from 'react-icons/ai';
 import { FaCss3Alt, FaGitAlt, FaUbuntu } from 'react-icons/fa';
 
+import littleLemon from '../assets/img/proj/littleLemon.png'
+import portfolio22 from '../assets/img/proj/portfolio23.png'
+import angryFish from '../assets/img/proj/angryfish.png'
+import thinkBig from '../assets/img/proj/thinkbig.png'
+import fahrerzentrale from '../assets/img/proj/fahrezentrale.png'
+import pickwings from '../assets/img/proj/pickwings.png'
+import helpinghand from '../assets/img/proj/helping.png'
+import fastRent from '../assets/img/proj/fastrent.png'
+import hulu from '../assets/img/proj/hulu.png'
+import monkey from '../assets/img/proj/monkey.png'
+import limmastadt from '../assets/img/proj/limmatstadt.png'
+import protier from '../assets/img/proj/protier.png'
+import bezahlbare from '../assets/img/proj/bezahlbare-Wohnungen.png'
+import feinheit from '../assets/img/proj/feinheit.png'
+import fcz from '../assets/img/proj/fcz.png'
+
 interface SocialMedia {
     title: string;
     link: string;
@@ -511,3 +527,281 @@ export const skills: IskillCards[] = [
     ]
   }
 ]
+
+export const workExp = [
+  {
+    company: "Freelance",
+    website: "https://www.pauloreizinho.com/",
+    year: "Feb 2024 - Now!",
+    role: "Frontend Dev",
+    reference: [],
+    description: "Working on different projects as a frontend dev with Angular, Django. Another project as a webflow developer and webmaster.",
+    // techs: [],
+    class: 'exp1',
+    color: "#1A5866",
+    projects: [
+      {
+        name: "Finito Pro",
+        link: "https://www.finitopro.ch/"
+      }
+    ]
+  },
+  {
+    company: "Richtig Service",
+    website: "https://www.richtigservice.ch/",
+    year: "Jan 2023 - Feb 2024",
+    // role: "Front-end developer, Transporter, Driver, Assembler, Team Leader",
+    role: "Transporter",
+    reference: ["Massimiliano Salihaj", "CEO at Richtig Service", "+41 76 275 35 78", "info@richtigservice.ch"],
+    description: "Deliver the furniture from clients such as Rolf Benz, Natuzzi and Martinuzzi, aswell as orient and organize the job with the client as team leader.",
+    // techs: [<AiOutlineHtml5 key={0} />, <FaCss3Alt key={0} />, <SiFigma key={0} />, <SiWindows key={0} />, <GiSteeringWheel key={0} />, <FaPeopleCarry key={0} />, <IoIosPeople key={0} />],
+    class: 'exp1',
+    color: "#1A5866",
+    // projects: [
+    //   {
+    //     name: "Richtig Service",
+    //     link: "https://www.richtigservice.ch/"
+    //   }
+    // ]
+  },
+  {
+    company: "Pickwings",
+    website: "https://pickwings.ch/en/",
+    year: "Feb 2022 - Jul 2022",
+    role: "Frontend Dev, Designer",
+    reference: ["Carlos Martinho", "Senior Software Engineer at Pickwings", "+41 078 742 20 51", "carlos@pickwings.ch"],
+    description:'Diverse Front End implementations, analize and debug, manipulation and testing REST API, design and improve Fahrerzentrale and respective mobile optimizations.',
+    // techs: [<SiAngular key={0} />, <SiDjango key={0} />, <SiTypescript key={0} />, <AiOutlineHtml5 key={0} />, <FaCss3Alt key={0} />, <SiJavascript key={0} />, <SiPython key={0} />, <SiDocker key={0} />, <SiFigma key={0} />, <SiNodedotjs key={0} />, <FaGitAlt key={0} />, <SiGitlab key={0} />, <FaUbuntu key={0} />, <SiYarn key={0} />, <SiAdobephotoshop key={0} />,],
+    class: 'exp2',
+    color: "#1A5866",
+    projects: [
+      {
+        name: "Fahrerzentrale",
+        link: "https://fahrerzentrale.ch/"
+      },
+      {
+        name: "Pickwings",
+        link: "https://pickwings.ch/"
+      },
+    ]
+  },
+  {
+    company: "Helping Hand",
+    website: "https://www.helpinghand.ch/",
+    year: "Apr 2020 - Dez 2021",
+    role: "Mover, Driver, Assembler",
+    reference: ["Michael Silbermann", "CEO at Helping Hand", "+41 043 443 17 37", "info@helpinghand.ch"],
+    description: 'My tasks was of what you would expect from a moving company, carry stuff from one house to another, also did tasks such as driver, storage manager,team leader and furniture assembler.',
+    // techs: [<SiJoomla key={0} />, <AiOutlineHtml5 key={0} />, <FaCss3Alt key={0} />, <SiFigma key={0} />, <SiWindows key={0} />, <GiSteeringWheel key={0} />, <FaPeopleCarry key={0} />, <IoIosPeople key={0} />],
+    class: 'exp3',
+    color: "#1A5866",
+    // projects: [
+    //   {
+    //     name: "Helping Hand",
+    //     link: "https://www.helpinghand.ch/"
+    //   }
+    // ]
+  },
+  {
+    company: "Feinheit",
+    website: "https://feinheit.ch/",
+    year: "Aug 2019 - Feb 2020",
+    role: "Frontend dev",
+    reference: ["Matthias Kestenholz", "Partner and Software Engineer at Feinheit", "+41 094 79 78 96", "mk@feinheit.ch"],
+    description: 'With only 2 months of starting the developer route I was hired in a internship by the awsome company Feinheit and had the oportunity to work as a frontend engineer on diversed projects.',
+    // techs: [<SiAngular key={0} />, <SiDjango key={0} />, <AiOutlineHtml5 key={0} />, <FaCss3Alt key={0} />, <SiJavascript key={0} />, <SiPython key={0} />, <SiDocker key={0} />, <SiNodedotjs key={0} />, <FaGitAlt key={0} />, <SiGitlab key={0} />, <FaUbuntu key={0} />, <SiYarn key={0} />],
+    class: 'exp4',
+    color: "#1A5866",
+    projects: [
+      {
+        name: "FC Zürich",
+        link: "https://www.fcz.ch/en"
+      },
+      {
+        name: "Feinheit",
+        link: "https://feinheit.ch/"
+      },
+      {
+        name: "Mehr bezahlbare Wohnungen",
+        link: "https://feinheit.ch/projekte/mehr-bezahlbare-wohnungen/"
+      },
+      {
+        name: "Limmatstadt",
+        link: "https://www.limmatstadt.ch/"
+      },
+      {
+        name: "Protier",
+        link: "https://www.protier.ch/"
+      },
+    ]
+  },
+]
+
+export const projects = [
+  {
+    image: littleLemon,
+    alt: "Little Lemon Restaurant",
+    title: "Little Lemon Restaurant",
+    link: "https://coursera-little-lemon.vercel.app/",
+    github: "https://github.com/lordrichard6/coursera_capstone_proj",
+    type: 'personal',
+    date: '2024/05',
+    featured: false,
+    tags: ['#react', "#typescript"],
+    project_type:"Restaurant Website",
+  },
+  {
+    image: portfolio22,
+    alt: "Portfolio 2022",
+    title: "Portfolio 2022",
+    link: "https://pauloreizinho.vercel.app/",
+    github: "https://github.com/lordrichard6/portfolio21",
+    type: 'personal',
+    date: '2022/06',
+    tags: ['#react', '#tailwind'],
+    project_type: "Portfolio",
+  },
+  {
+    image: angryFish,
+    alt: "Angry Fish",
+    title: "Angry Fish",
+    link: "https://angry-fish.vercel.app/",
+    github: "https://github.com/lordrichard6/angry_fish",
+    type: 'personal',
+    date: '2024/04',
+    tags: ['#react', '#AppWrite'],
+    project_type: "Social Media App",
+  },
+  {
+    image: thinkBig,
+    alt: "think big homepage",
+    title: "ThinkBig",
+    link: "https://think-big.vercel.app/",
+    github: "https://github.com/lordrichard6/think_big",
+    type: 'personal',
+    date: '2023/04',
+    tags: ['#react', '#tailwind'],
+    project_type: "Website",
+  },
+  {
+    image: fahrerzentrale,
+    alt: "fahrezentrale homepage",
+    title: "FahrerZentrale",
+    link: "https://fahrerzentrale.ch/en/landing",
+    github: "",
+    type: 'profissional',
+    date: '2022/06',
+    tags: ['#angular', '#django'],
+    project_type: "Job Platform",
+  },
+  {
+    image: pickwings,
+    alt: "pickwings homepage",
+    title: "Pickwings",
+    link: "https://pickwings.ch/de/",
+    github: "",
+    type: 'profissional',
+    date: '2022/05',
+    tags: ['#angular', '#django'],
+    project_type: "Courier App",
+  },
+  {
+    image: helpinghand,
+    alt: "helping hand homepage",
+    title: "Helping Hand",
+    link: "https://www.helpinghand.ch/",
+    github: "",
+    type: 'profissional',
+    date: '2021/06',
+    tags: ['#joomla'],
+    project_type: "Website",
+  },
+  {
+    image: fastRent,
+    alt: "car rental website",
+    title: "FastRent",
+    link: "https://lordrichard-rentfast.netlify.app/",
+    github: "https://github.com/lordrichard6/rent-fast",
+    type: 'personal',
+    date: '2021/06',
+    tags: ['#reactjs', '#typescript'],
+    project_type: "Website",
+  },
+  {
+    image: hulu,
+    alt: "movie streaming platform hulu",
+    title: "Hulu clone",
+    link: "https://hulu-clone-rosy.vercel.app/",
+    github: "https://github.com/lordrichard6/hulu_clone",
+    type: 'personal',
+    date: '2021/04',
+    tags: ['#nextjs', '#tailwind'],
+    project_type: "Movies Database",
+  },
+  {
+    image: monkey,
+    alt: "e-shop for trained monkeys",
+    title: "Monkey Circus",
+    link: "https://monkeycircus-2z4e865i4.now.sh",
+    github: "https://github.com/lordrichard6/monkeycircus",
+    type: 'personal',
+    date: '2020/03',
+    tags: ['#nextjs', '#typescript'],
+    project_type: "E-commerce",
+  },
+  {
+    image: limmastadt,
+    alt: "limmastadt website",
+    title: "Limmatstadt",
+    link: "https://www.limmatstadt.ch/",
+    github: "",
+    type: 'profissional',
+    date: '2020/02',
+    tags: ['#angular', '#django'],
+    project_type: "Website",
+  },
+  {
+    image: protier,
+    alt: "protier website",
+    title: "Protier",
+    link: "https://www.protier.ch/",
+    github: "",
+    type: 'profissional',
+    date: '2020/01',
+    tags: ['#angular', '#django'],
+    project_type: "Website",
+  },
+  {
+    image: bezahlbare,
+    alt: "Bezahlbare Wohnungen project",
+    title: "Bezahlbare Wohnungen",
+    link: "https://feinheit.ch/projekte/mehr-bezahlbare-wohnungen/",
+    github: "",
+    type: 'profissional',
+    date: '2019/11',
+    tags: ['#angular', '#django'],
+    project_type: "Campaign Website",
+  },
+  {
+    image: feinheit,
+    alt: "Feinheit website",
+    title: "Feinheit",
+    link: "https://feinheit.ch/",
+    github: "",
+    type: 'profissional',
+    date: '2019/10',
+    tags: ['#angular', '#django'],
+    project_type: "Website",
+  },
+  {
+    image: fcz,
+    alt: "fcz website",
+    title: "FCZ Website",
+    link: "https://www.fcz.ch/",
+    github: "",
+    type: 'profissional',
+    date: '2019/08',
+    tags: ['#angular', '#django'],
+    project_type: "Website, E-shop",
+  },
+];
