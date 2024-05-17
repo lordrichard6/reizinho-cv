@@ -5,12 +5,25 @@ import { PiGithubLogoFill, PiWhatsappLogoLight  } from "react-icons/pi";
 import { IoMdHome } from "react-icons/io";
 import { LuPhoneCall } from "react-icons/lu";
 import { RiMailSendLine } from "react-icons/ri";
-import { SiSitepoint } from "react-icons/si";
+import { SiSitepoint, SiJavascript, SiTypescript, SiJquery, SiReact, SiNextdotjs, SiAngular, SiPython, SiDjango, SiNodedotjs, SiExpress, SiPostgresql, SiMongodb, SiGraphql, SiDocker, SiGithub, SiNpm, SiYarn, SiJenkins, SiAnsible, SiKubernetes, SiAdobephotoshop, SiAdobepremierepro, SiFigma, SiWix } from "react-icons/si";
+import { AiOutlineConsoleSql, AiOutlineHtml5 } from 'react-icons/ai';
+import { FaCss3Alt, FaGitAlt, FaUbuntu } from 'react-icons/fa';
 
 interface SocialMedia {
     title: string;
     link: string;
     icon: IconType; // Correct type annotation for the icon property
+}
+
+export interface Tech {
+  icon: IconType;
+  name: string;
+}
+
+interface IskillCards {
+  title: string;
+  cardColor: string;
+  techs: Tech[];
 }
 
 export const header = {
@@ -78,7 +91,7 @@ export const certifications = [
   {
     title: "Complete Web Developer: Zero to Mastery",
     school: "Udemy",
-    image: "/cv/udemy.png",
+    image: "/src/assets/img/udemy-logo.png",
     link: "https://drive.google.com/file/d/1dN3f5oHThMCSrBg3Gf9tpr3-GOjoNm9h/view?usp=drive_link",
     language: "",
     tags: "Web development",
@@ -109,7 +122,7 @@ export const certifications = [
   {
     title: "Modern React with Redux",
     school: "Udemy",
-    image: "/cv/udemy.png",
+    image: "/src/assets/img/udemy-logo.png",
     link: "https://drive.google.com/file/d/1h9tkGfllT_CmWCn12ERj8sQfSxc6RRXL/view?usp=drive_link",
     language: "",
     tags: "Web development",
@@ -123,7 +136,7 @@ export const certifications = [
   {
     title: "Python and Django Full Stack Web Developer Bootcamp",
     school: "Udemy",
-    image: "/cv/udemy.png",
+    image: "/src/assets/img/udemy-logo.png",
     link: "https://drive.google.com/file/d/1aIOMu5gfYpheZUG7NqJWFsSVzg8PVe2Z/view?usp=sharing",
     language: "",
     tags: "Web development",
@@ -149,7 +162,7 @@ export const certifications = [
   {
     title: "Advanced CSS and Sass",
     school: "Udemy",
-    image: "/cv/udemy.png",
+    image: "/src/assets/img/udemy-logo.png",
     link: "https://drive.google.com/file/d/1ShcED9SNGDAbeZ-U2TIE71y7csGyRHCF/view?usp=drive_link",
     language: "",
     tags: "Web development",
@@ -171,7 +184,7 @@ export const certifications = [
   {
     title: "Responsive Web Design",
     school: "FreeCodeCamp",
-    image: "/cv/freecodecamp.png",
+    image: "/src/assets/img/freecodecamp-logo.png",
     link: "https://drive.google.com/file/d/1hEbPYSURr-R66Ud1n9K67QDyiBXD_zUR/view?usp=drive_link",
     language: "",
     tags: "Web development",
@@ -187,7 +200,7 @@ export const certifications = [
   {
     title: "JavaScript Algorithms and Data Structures",
     school: "FreeCodeCamp",
-    image: "/cv/freecodecamp.png",
+    image: "/src/assets/img/freecodecamp-logo.png",
     link: "https://drive.google.com/file/d/1XgAIcAx6WUaOE1Vf8JE2iaHFxjVmLgkN/view?usp=drive_link",
     language: "",
     tags: "Web/Software development",
@@ -208,7 +221,7 @@ export const certifications = [
   {
     title: "Front-End Development Libraries",
     school: "FreeCodeCamp",
-    image: "/cv/freecodecamp.png",
+    image: "/src/assets/img/freecodecamp-logo.png",
     link: "https://drive.google.com/file/d/1ik1BKGL5r95Mq7xtp2uSzl2uWLkSz05U/view?usp=drive_link",
     language: "",
     tags: "Web/Software development",
@@ -226,7 +239,7 @@ export const certifications = [
   {
     title: "HTML and CSS in depth",
     school: "Meta",
-    image: "/cv/meta.png",
+    image: "/src/assets/img/meta-logo.png",
     link: "https://drive.google.com/file/d/1H2wRbHLx8PX7wi-ghXhOnwcwd7upUSWz/view?usp=drive_link",
     language: "",
     tags: "",
@@ -237,7 +250,7 @@ export const certifications = [
   {
     title: "Programming with JavaScript",
     school: "Meta",
-    image: "/cv/meta.png",
+    image: "/src/assets/img/meta-logo.png",
     link: "https://drive.google.com/file/d/1m7OG5hxdCgCptSXPAq6GGS0_y3iLdJo8/view?usp=drive_link",
     language: "",
     tags: "",
@@ -248,7 +261,7 @@ export const certifications = [
   {
     title: "Version Control",
     school: "Meta",
-    image: "/cv/meta.png",
+    image: "/src/assets/img/meta-logo.png",
     link: "https://drive.google.com/file/d/1E3OHxAzTfvjPv1nmz4Th6Xv02VIeEtZt/view?usp=drive_link",
     language: "",
     tags: "",
@@ -259,7 +272,7 @@ export const certifications = [
   {
     title: "React Basics",
     school: "Meta",
-    image: "/cv/meta.png",
+    image: "/src/assets/img/meta-logo.png",
     link: "https://drive.google.com/file/d/1siLgyyJVqpWKMLIBsPLrq53gHLxE7atZ/view?usp=drive_link",
     language: "",
     tags: "",
@@ -270,7 +283,7 @@ export const certifications = [
   {
     title: "Advanced React",
     school: "Meta",
-    image: "/cv/meta.png",
+    image: "/src/assets/img/meta-logo.png",
     link: "https://drive.google.com/file/d/1AB-TRzdNsHarp-Nsz1hKmmli4VpMYAyF/view?usp=drive_link",
     language: "",
     tags: "",
@@ -281,7 +294,7 @@ export const certifications = [
   {
     title: "Principles of UX/UI Design",
     school: "Meta",
-    image: "/cv/meta.png",
+    image: "/src/assets/img/meta-logo.png",
     link: "https://drive.google.com/file/d/1GGKcKrCPG4h27JWQ5y2yeGoMDHcnSxn4/view?usp=drive_link",
     language: "",
     tags: "",
@@ -442,3 +455,59 @@ export const recomendations = [
     language: "(de)",
   },
 ];
+
+export const skills: IskillCards[] = [
+  {
+    title: "Frontend",
+    cardColor: "bg-[#879EAD]",
+    techs: [
+      { icon: AiOutlineHtml5, name: "HTML" },
+      { icon: FaCss3Alt, name: "CSS" },
+      { icon: SiJavascript, name: "Javascript" },
+      { icon: SiTypescript, name: "Typescript" },
+      { icon: SiJquery, name: "JQuery" },
+      { icon: SiReact, name: "React" },
+      { icon: SiNextdotjs, name: "Next.js" },
+      { icon: SiAngular, name: "Angular" },
+    ]
+  },
+  {
+    title: "Backend",
+    cardColor: "bg-[#1A5866]",
+    techs: [
+      { icon: SiPython, name: "Python" },
+      { icon: SiDjango, name: "Django" },
+      { icon: SiNodedotjs, name: "Node" },
+      { icon: SiExpress, name: "Express.js" },
+      { icon: SiPostgresql, name: "Post" },
+      { icon: AiOutlineConsoleSql, name: "SQL" },
+      { icon: SiMongodb, name: "MongoDB" },
+      { icon: SiGraphql, name: "GraphQl" },
+    ]
+  },
+  {
+    title: "DevOps",
+    cardColor: "bg-[#776C62]",
+    techs: [
+      { icon: FaGitAlt, name: "Git" },
+      { icon: SiDocker, name: "Docker" },
+      { icon: SiGithub, name: "Github" },
+      { icon: SiNpm, name: "NPM" },
+      { icon: SiYarn, name: "yarn" },
+      { icon: SiJenkins, name: "Jenkins" },
+      { icon: SiAnsible, name: "Ansible" },
+      { icon: SiKubernetes, name: "Kubernetes" },
+    ]
+  },
+  {
+    title: "Other",
+    cardColor: "bg-[#99958E]",
+    techs: [
+      { icon: SiAdobephotoshop, name: "Photoshop" },
+      { icon: SiAdobepremierepro, name: "Premiere pro" },
+      { icon: SiFigma, name: "Figma" },
+      { icon: FaUbuntu, name: "Ubuntu" },
+      { icon: SiWix, name: "Wix" },
+    ]
+  }
+]

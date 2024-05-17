@@ -25,3 +25,31 @@
 .absolute-center {
   @apply absolute top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%] flex justify-center items-center;
 }
+
+// SECTIONS-----------------------------------------------------------------------------------------
+.skill-card {
+  position: relative;
+  // width: 100%;
+  // height: 100%;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+  &.is-flipped {
+    transform: translateX(-100%) rotateY(-180deg);
+    .front {
+      button {
+        @apply opacity-0 transition-all ease-in-out duration-300 delay-150;
+      }
+    }
+  }
+  .card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    &.back {
+      transform: rotateY(180deg);
+    }
+  }
+
+}
