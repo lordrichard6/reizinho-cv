@@ -22,7 +22,7 @@ const SkillCard: React.FC<TySkillCard> = ({ cardColor, cardType, title, techs })
                 <TiArrowBack onClick={handleButtonClick} className='absolute -top-20 -right-6 lg:-top-48 lg:-right-8 text-6xl cursor-pointer' />
                     {techs.map((tech: Tech) => {
                         return (
-                            <motion.div drag dragElastic={0.2} dragConstraints={constraintsRef} className='text-4xl border-solid border-2 text-slate-50 rounded-xl p-2 m-1 cursor-pointer' key={tech.name}>
+                            <motion.div drag dragSnapToOrigin dragElastic={0.2} dragConstraints={constraintsRef} className='text-4xl border-solid border-2 text-slate-50 rounded-xl p-2 m-1 cursor-pointer' key={tech.name}>
                                 <tech.icon />
                             </motion.div>)}
                         )

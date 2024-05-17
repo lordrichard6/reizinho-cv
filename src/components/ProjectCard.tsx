@@ -8,7 +8,7 @@ interface ProjectCardProps {
     link: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ name, type, tags, img, alt, project_type, link }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ name, tags, img, alt, project_type, link }) => {
     return (
         <a className="standart-hover standart-animation" href={link} target="_blank" rel="noopener noreferrer">
             <div className="project-card w-[160px] h-[160px] lg:w-[200px] lg:h-[200px] bg-dark-color-01 rounded-2xl overflow-hidden relative z-10 flex-centered flex-col gap-2 p-2">
