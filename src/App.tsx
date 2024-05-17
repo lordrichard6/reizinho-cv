@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes, useEffect, useState } from "react";
+import { useState } from "react";
 import { AnimatePresence, motion, useScroll } from 'framer-motion';
 import { Link } from 'react-scroll';
 
