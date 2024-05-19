@@ -51,6 +51,11 @@ import bezahlbare from "../assets/img/proj/bezahlbare-Wohnungen.png";
 import feinheit from "../assets/img/proj/feinheit.png";
 import fcz from "../assets/img/proj/fcz.png";
 
+import udemy from "../assets/img/udemy-logo.png";
+import meta from "../assets/img/meta-logo.png";
+import freecodecamp from "../assets/img/freecodecamp-logo.png";
+
+
 interface SocialMedia {
   title: string;
   link: string;
@@ -152,7 +157,7 @@ export const certifications = [
   {
     title: "Complete Web Developer: Zero to Mastery",
     school: "Udemy",
-    image: "/src/assets/img/udemy-logo.png",
+    image: udemy,
     link: "https://drive.google.com/file/d/1dN3f5oHThMCSrBg3Gf9tpr3-GOjoNm9h/view?usp=drive_link",
     language: "",
     tags: "Web development",
@@ -183,7 +188,7 @@ export const certifications = [
   {
     title: "Modern React with Redux",
     school: "Udemy",
-    image: "/src/assets/img/udemy-logo.png",
+    image: udemy,
     link: "https://drive.google.com/file/d/1h9tkGfllT_CmWCn12ERj8sQfSxc6RRXL/view?usp=drive_link",
     language: "",
     tags: "Web development",
@@ -197,7 +202,7 @@ export const certifications = [
   {
     title: "Python and Django Full Stack Web Developer Bootcamp",
     school: "Udemy",
-    image: "/src/assets/img/udemy-logo.png",
+    image: udemy,
     link: "https://drive.google.com/file/d/1aIOMu5gfYpheZUG7NqJWFsSVzg8PVe2Z/view?usp=sharing",
     language: "",
     tags: "Web development",
@@ -223,7 +228,7 @@ export const certifications = [
   {
     title: "Advanced CSS and Sass",
     school: "Udemy",
-    image: "/src/assets/img/udemy-logo.png",
+    image: udemy,
     link: "https://drive.google.com/file/d/1ShcED9SNGDAbeZ-U2TIE71y7csGyRHCF/view?usp=drive_link",
     language: "",
     tags: "Web development",
@@ -245,7 +250,7 @@ export const certifications = [
   {
     title: "Responsive Web Design",
     school: "FreeCodeCamp",
-    image: "/src/assets/img/freecodecamp-logo.png",
+    image: freecodecamp,
     link: "https://drive.google.com/file/d/1hEbPYSURr-R66Ud1n9K67QDyiBXD_zUR/view?usp=drive_link",
     language: "",
     tags: "Web development",
@@ -261,7 +266,7 @@ export const certifications = [
   {
     title: "JavaScript Algorithms and Data Structures",
     school: "FreeCodeCamp",
-    image: "/src/assets/img/freecodecamp-logo.png",
+    image: freecodecamp,
     link: "https://drive.google.com/file/d/1XgAIcAx6WUaOE1Vf8JE2iaHFxjVmLgkN/view?usp=drive_link",
     language: "",
     tags: "Web/Software development",
@@ -282,7 +287,7 @@ export const certifications = [
   {
     title: "Front-End Development Libraries",
     school: "FreeCodeCamp",
-    image: "/src/assets/img/freecodecamp-logo.png",
+    image: freecodecamp,
     link: "https://drive.google.com/file/d/1ik1BKGL5r95Mq7xtp2uSzl2uWLkSz05U/view?usp=drive_link",
     language: "",
     tags: "Web/Software development",
@@ -300,7 +305,7 @@ export const certifications = [
   {
     title: "HTML and CSS in depth",
     school: "Meta",
-    image: "/src/assets/img/meta-logo.png",
+    image: meta,
     link: "https://drive.google.com/file/d/1H2wRbHLx8PX7wi-ghXhOnwcwd7upUSWz/view?usp=drive_link",
     language: "",
     tags: "",
@@ -311,7 +316,7 @@ export const certifications = [
   {
     title: "Programming with JavaScript",
     school: "Meta",
-    image: "/src/assets/img/meta-logo.png",
+    image: meta,
     link: "https://drive.google.com/file/d/1m7OG5hxdCgCptSXPAq6GGS0_y3iLdJo8/view?usp=drive_link",
     language: "",
     tags: "",
@@ -322,7 +327,7 @@ export const certifications = [
   {
     title: "Version Control",
     school: "Meta",
-    image: "/src/assets/img/meta-logo.png",
+    image: meta,
     link: "https://drive.google.com/file/d/1E3OHxAzTfvjPv1nmz4Th6Xv02VIeEtZt/view?usp=drive_link",
     language: "",
     tags: "",
@@ -333,7 +338,7 @@ export const certifications = [
   {
     title: "React Basics",
     school: "Meta",
-    image: "/src/assets/img/meta-logo.png",
+    image: meta,
     link: "https://drive.google.com/file/d/1siLgyyJVqpWKMLIBsPLrq53gHLxE7atZ/view?usp=drive_link",
     language: "",
     tags: "",
@@ -344,7 +349,7 @@ export const certifications = [
   {
     title: "Advanced React",
     school: "Meta",
-    image: "/src/assets/img/meta-logo.png",
+    image: meta,
     link: "https://drive.google.com/file/d/1AB-TRzdNsHarp-Nsz1hKmmli4VpMYAyF/view?usp=drive_link",
     language: "",
     tags: "",
@@ -355,7 +360,7 @@ export const certifications = [
   {
     title: "Principles of UX/UI Design",
     school: "Meta",
-    image: "/src/assets/img/meta-logo.png",
+    image: meta,
     link: "https://drive.google.com/file/d/1GGKcKrCPG4h27JWQ5y2yeGoMDHcnSxn4/view?usp=drive_link",
     language: "",
     tags: "",
