@@ -25,6 +25,40 @@ body {
     }
 }
 
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #fbfbf9;
+    border-radius: 16px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #b2d6bc;
+}
+
+ul::-webkit-scrollbar {
+    width: 5px;
+}
+
+ul::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+ul::-webkit-scrollbar-thumb {
+    background: #fbfbf9;
+    border-radius: 16px;
+}
+
+ul::-webkit-scrollbar-thumb:hover {
+    background: #b2d6bc;
+}
+
 * {
     box-sizing: border-box;
     border: none;

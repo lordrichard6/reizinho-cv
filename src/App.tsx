@@ -1,20 +1,18 @@
-import { useState } from "react";
-import { AnimatePresence, motion, useScroll } from 'framer-motion';
+// import { useState } from "react";
+import { motion, useScroll } from 'framer-motion';
 import { Link } from 'react-scroll';
 
-import { SlClose } from "react-icons/sl";
-
 import './globals.scss'
-import { certifications, socialMedia, contact, skills, workExp, projects } from './data'
+import { certifications, socialMedia, contact, skills, workExp, projects, degrees } from './data'
 
 import paulo_header from './assets/img/paulo_main.png'
 import SkillCard from "./components/SkillCard";
 import TimelineItem from "./components/TimeLineItem";
 import ProjectCard from "./components/ProjectCard";
+import EducationCard from "./components/EducationCard";
 
 
 const App: React.FC = () => {
-  const [selectedId, setSelectedId] = useState<string | null>(null)
   const { scrollYProgress } = useScroll();
 
 
@@ -66,7 +64,6 @@ const App: React.FC = () => {
 
       <section className='education-section flex items-center justify-around flex-col min-h-screen bg-dark-color-01 text-light-color-01 py-20'>
         <h1 className='mb-'>Education</h1>
-
         <div className="flex-centered flex-col h-full w-full mb-10">
 
           <div className="flex-centered gap-2 mb-4 lg:mb-10">
@@ -74,11 +71,14 @@ const App: React.FC = () => {
             <h2>Degrees</h2>
             <hr className='w-20 lg:w-40' />
           </div>
-
-          <div className='bg-[#262A2D] px-6 py-6 rounded-xl'>
-            <h4 className='w-[200px] text-center'>Management and Administration</h4>
-          </div>
-
+          <EducationCard
+            id={degrees.id}
+            title={degrees.title}
+            skills={degrees.skills}
+            image={degrees.image}
+            school={degrees.school}
+            link={degrees.link}
+          />
         </div>
 
         <div className="flex-centered flex-col h-full">
@@ -88,40 +88,21 @@ const App: React.FC = () => {
             <hr className='w-20 lg:w-40' />
           </div>
           <div className="grid lg:grid-cols-4 gap-4 mt-10">
-            {certifications.map((cert) => {
+            {certifications.map((data) => {
               return (
-                <>
-                  <motion.div key={cert.id} onClick={() => setSelectedId(cert.id)} layoutId={cert.id} className='bg-[#262A2D] px-6 py-6 rounded-xl flex-centered standart-animation standart-hover z-0'>
-                    <motion.h4 className='w-[200px] text-center'>{cert.title}</motion.h4>
-                  </motion.div>
-                  <AnimatePresence>
-                    {selectedId === cert.id && (
-                      <motion.div layoutId={selectedId} className="fixed top-[5%] lg:top-1/5 left-0 lg:left-1/3 flex-centered z-40">
-                        <motion.div onClick={() => setSelectedId(null)} className="overlay absolute-center fixed w-screen h-screen bg-[#262A2D] backdrop-blur-md opacity-80" />
-                        <motion.div className='bg-dark-color-02 max-w-[360px] lg:min-w-[500px] lg:max-w-[800px] min-h-[500px] opacity-100 z-50 rounded-xl p-10 mx-4 flex flex-col'>
-                          <SlClose onClick={() => setSelectedId(null)} className='text-light-color-01 standart-hover standart-animation text-4xl absolute top-0 right-0 my-4 mx-6' />
-                          <motion.h4 className='text-center my-4'>{cert.title}</motion.h4>
-                          <motion.ul className="list-disc">
-                            {cert.skills.map((skill) => {
-                              return (
-                                <motion.li className="text-light-color-01"><p className="text-sm leading-normal lg:text-[24px] font-light">{skill}</p></motion.li>
-                              )
-                            })}
-                          </motion.ul>
-                          <motion.div className="flex flex-col lg:flex-row justify-between items-center mt-auto gap-4">
-                            <img className="h-10 max-w-[320px] lg:h-20 lg:max-w-[480px] invert mt-4" src={cert.image} alt={cert.school} />
-                            <button className='bg-[#776C62] text-light-color-01 w-fit p-4 rounded-xl standart-hover standart-animation text-2xl'><a href={cert.link} target="_blank" rel="noopener noreferrer">Certification PDF</a></button>
-                          </motion.div>
-                        </motion.div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </>
-
+                <EducationCard
+                  id={data.id}
+                  title={data.title}
+                  skills={data.skills}
+                  image={data.image}
+                  school={data.school}
+                  link={data.link}
+                />
               )
             })}
           </div>
         </div>
+
       </section>
 
       <section className='skills-section flex-centered flex-col min-h-[60vh] bg-light-color-01 text-light-color-01 py-20'>
@@ -177,14 +158,14 @@ const App: React.FC = () => {
                     project_type={proj.project_type}
                     link={proj.link}
                   />
-              ))}
+                ))}
 
             </div>
           </div>
           <div className="profissional w-1/2">
             <h2 className='text-light-color-02 text-center mb-6'>Profissional</h2>
             <div className="flex flex-wrap gap-6 text-light-color-02 text-center">
-            {projects
+              {projects
                 .filter(proj => proj.type === "profissional")
                 .map((proj) => (
                   <ProjectCard
@@ -197,7 +178,7 @@ const App: React.FC = () => {
                     project_type={proj.project_type}
                     link={proj.link}
                   />
-              ))}
+                ))}
             </div>
           </div>
         </div>

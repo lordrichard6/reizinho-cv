@@ -1,34 +1,60 @@
-import { IconType } from 'react-icons';
+import { IconType } from "react-icons";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { TfiInstagram } from "react-icons/tfi";
-import { PiGithubLogoFill, PiWhatsappLogoLight  } from "react-icons/pi";
+import { PiGithubLogoFill, PiWhatsappLogoLight } from "react-icons/pi";
 import { IoMdHome } from "react-icons/io";
 import { LuPhoneCall } from "react-icons/lu";
 import { RiMailSendLine } from "react-icons/ri";
-import { SiSitepoint, SiJavascript, SiTypescript, SiJquery, SiReact, SiNextdotjs, SiAngular, SiPython, SiDjango, SiNodedotjs, SiExpress, SiPostgresql, SiMongodb, SiGraphql, SiDocker, SiGithub, SiNpm, SiYarn, SiJenkins, SiAnsible, SiKubernetes, SiAdobephotoshop, SiAdobepremierepro, SiFigma, SiWix } from "react-icons/si";
-import { AiOutlineConsoleSql, AiOutlineHtml5 } from 'react-icons/ai';
-import { FaCss3Alt, FaGitAlt, FaUbuntu } from 'react-icons/fa';
+import {
+  SiSitepoint,
+  SiJavascript,
+  SiTypescript,
+  SiJquery,
+  SiReact,
+  SiNextdotjs,
+  SiAngular,
+  SiPython,
+  SiDjango,
+  SiNodedotjs,
+  SiExpress,
+  SiPostgresql,
+  SiMongodb,
+  SiGraphql,
+  SiDocker,
+  SiGithub,
+  SiNpm,
+  SiYarn,
+  SiJenkins,
+  SiAnsible,
+  SiKubernetes,
+  SiAdobephotoshop,
+  SiAdobepremierepro,
+  SiFigma,
+  SiWix,
+} from "react-icons/si";
+import { AiOutlineConsoleSql, AiOutlineHtml5 } from "react-icons/ai";
+import { FaCss3Alt, FaGitAlt, FaUbuntu } from "react-icons/fa";
 
-import littleLemon from '../assets/img/proj/littleLemon.png'
-import portfolio22 from '../assets/img/proj/portfolio23.png'
-import angryFish from '../assets/img/proj/angryfish.png'
-import thinkBig from '../assets/img/proj/thinkbig.png'
-import fahrerzentrale from '../assets/img/proj/fahrezentrale.png'
-import pickwings from '../assets/img/proj/pickwings.png'
-import helpinghand from '../assets/img/proj/helping.png'
-import fastRent from '../assets/img/proj/fastrent.png'
-import hulu from '../assets/img/proj/hulu.png'
-import monkey from '../assets/img/proj/monkey.png'
-import limmastadt from '../assets/img/proj/limmatstadt.png'
-import protier from '../assets/img/proj/protier.png'
-import bezahlbare from '../assets/img/proj/bezahlbare-Wohnungen.png'
-import feinheit from '../assets/img/proj/feinheit.png'
-import fcz from '../assets/img/proj/fcz.png'
+import littleLemon from "../assets/img/proj/littleLemon.png";
+import portfolio22 from "../assets/img/proj/portfolio23.png";
+import angryFish from "../assets/img/proj/angryfish.png";
+import thinkBig from "../assets/img/proj/thinkbig.png";
+import fahrerzentrale from "../assets/img/proj/fahrezentrale.png";
+import pickwings from "../assets/img/proj/pickwings.png";
+import helpinghand from "../assets/img/proj/helping.png";
+import fastRent from "../assets/img/proj/fastrent.png";
+import hulu from "../assets/img/proj/hulu.png";
+import monkey from "../assets/img/proj/monkey.png";
+import limmastadt from "../assets/img/proj/limmatstadt.png";
+import protier from "../assets/img/proj/protier.png";
+import bezahlbare from "../assets/img/proj/bezahlbare-Wohnungen.png";
+import feinheit from "../assets/img/proj/feinheit.png";
+import fcz from "../assets/img/proj/fcz.png";
 
 interface SocialMedia {
-    title: string;
-    link: string;
-    icon: IconType; // Correct type annotation for the icon property
+  title: string;
+  link: string;
+  icon: IconType; // Correct type annotation for the icon property
 }
 
 export interface Tech {
@@ -48,27 +74,27 @@ export const header = {
 };
 
 export const socialMedia: SocialMedia[] = [
-    {
-        title: "LinkedIn",
-        link: "https://www.linkedin.com/in/pauloreizinho/",
-        icon: SlSocialLinkedin
-    },
-    {
-        title: "Instagram",
-        link: "https://www.instagram.com/paulo_reizinho/",
-        icon: TfiInstagram 
-    },
-    {
-        title: "Github",
-        link: "https://github.com/lordrichard6",
-        icon: PiGithubLogoFill 
-    },
-    {
-        title: "Whatsapp",
-        link: "https://wa.link/sru6m7",
-        icon: PiWhatsappLogoLight 
-    }
-]
+  {
+    title: "LinkedIn",
+    link: "https://www.linkedin.com/in/pauloreizinho/",
+    icon: SlSocialLinkedin,
+  },
+  {
+    title: "Instagram",
+    link: "https://www.instagram.com/paulo_reizinho/",
+    icon: TfiInstagram,
+  },
+  {
+    title: "Github",
+    link: "https://github.com/lordrichard6",
+    icon: PiGithubLogoFill,
+  },
+  {
+    title: "Whatsapp",
+    link: "https://wa.link/sru6m7",
+    icon: PiWhatsappLogoLight,
+  },
+];
 
 export const contact = [
   {
@@ -93,17 +119,36 @@ export const contact = [
   },
 ];
 
+export const degrees = {
+  title: "Managment and Administration",
+  school: "IEFP Portugal",
+  image: "",
+  link: "https://drive.google.com/file/d/1GUD5DhtC0MK9tD-ivo-ZVl3N4ub3oqoL/view?usp=drive_link",
+  language: "(de)",
+  tags: "administration",
+  showSkills: true,
+  skills: [
+    "Mathematics",
+    "Social psycology of organizations",
+    "Legal principles",
+    "Iformation and communication technologies",
+    "Health and safety at work",
+    "Commercial documentation",
+    "Commercial, administrative and labol law",
+    "Accounting",
+    "Administration and management of human resources",
+    "Procurement and inventory management",
+    "Technical and administrative practices",
+    "Organization and business management",
+    "Commercial calculation",
+    "Portuguese and English, Business level",
+    "Customer service",
+    "Practice during the training",
+  ],
+  id: "111",
+};
+
 export const certifications = [
-  // {
-  //     title: "Managment and Administration",
-  //     school: "IEFP Portugal",
-  //     image: "",
-  //     link: "https://drive.google.com/file/d/1GUD5DhtC0MK9tD-ivo-ZVl3N4ub3oqoL/view?usp=drive_link",
-  //     language: "(de)",
-  //     tags: "Web development",
-  //     showSkills: true,
-  //     skills: ["Mathematics", "Social psycology of organizations", "Legal principles", "Iformation and communication technologies", "Health and safety at work", "Commercial documentation", "Commercial, administrative and labol law", "Accounting", "Administration and management of human resources", "Procurement and inventory management", "Technical and administrative practices", "Organization and business management", "Commercial calculation", "Portuguese and English, Business level", "Customer service", "Practice during the training"]
-  // },
   {
     title: "Complete Web Developer: Zero to Mastery",
     school: "Udemy",
@@ -133,7 +178,7 @@ export const certifications = [
       "Scalable Infrastructure",
       "Production and Deployment",
     ],
-    id: "1"
+    id: "1",
   },
   {
     title: "Modern React with Redux",
@@ -147,7 +192,7 @@ export const certifications = [
       "Fundamentals concepts behind React and Redux including JSX, state, and props",
       "NPM, Webpack, Babel, and ES6/ES2015 Javascript syntax",
     ],
-    id: "2"
+    id: "2",
   },
   {
     title: "Python and Django Full Stack Web Developer Bootcamp",
@@ -173,7 +218,7 @@ export const certifications = [
       "REST APIs",
       "User Authentication",
     ],
-    id: "3"
+    id: "3",
   },
   {
     title: "Advanced CSS and Sass",
@@ -195,7 +240,7 @@ export const certifications = [
       "Flexbox layouts: main concepts, introduction to both flex container and flex item-specific properties",
       "CSS Grid layouts: main concepts, CSS grid vs flexbox, and layout techniques applied to a real-world project",
     ],
-    id: "4"
+    id: "4",
   },
   {
     title: "Responsive Web Design",
@@ -211,7 +256,7 @@ export const certifications = [
       "CSS Box model, Flexbox, Grid, Animations, Typography, Pseudo selectors",
       "Responsive design principles",
     ],
-    id: "5"
+    id: "5",
   },
   {
     title: "JavaScript Algorithms and Data Structures",
@@ -232,7 +277,7 @@ export const certifications = [
       "Functional Programming is another popular approach to software development",
       "Intermediate Algorithm Scripting",
     ],
-    id: "6"
+    id: "6",
   },
   {
     title: "Front-End Development Libraries",
@@ -250,7 +295,7 @@ export const certifications = [
       "Redux is defined as a 'predictable state container for JavaScript apps' that helps ensure your apps work predictably, and are easier to test.",
       "React and Redux are often mentioned together, and with good reason.",
     ],
-    id: "7"
+    id: "7",
   },
   {
     title: "HTML and CSS in depth",
@@ -261,7 +306,7 @@ export const certifications = [
     tags: "",
     showSkills: false,
     skills: [""],
-    id: "8"
+    id: "8",
   },
   {
     title: "Programming with JavaScript",
@@ -272,7 +317,7 @@ export const certifications = [
     tags: "",
     showSkills: false,
     skills: [""],
-    id: "9"
+    id: "9",
   },
   {
     title: "Version Control",
@@ -283,7 +328,7 @@ export const certifications = [
     tags: "",
     showSkills: false,
     skills: [""],
-    id: "10"
+    id: "10",
   },
   {
     title: "React Basics",
@@ -294,7 +339,7 @@ export const certifications = [
     tags: "",
     showSkills: false,
     skills: [""],
-    id: "11"
+    id: "11",
   },
   {
     title: "Advanced React",
@@ -305,7 +350,7 @@ export const certifications = [
     tags: "",
     showSkills: false,
     skills: [""],
-    id: "12"
+    id: "12",
   },
   {
     title: "Principles of UX/UI Design",
@@ -316,7 +361,7 @@ export const certifications = [
     tags: "",
     showSkills: false,
     skills: [""],
-    id: "13"
+    id: "13",
   },
 ];
 
@@ -485,7 +530,7 @@ export const skills: IskillCards[] = [
       { icon: SiReact, name: "React" },
       { icon: SiNextdotjs, name: "Next.js" },
       { icon: SiAngular, name: "Angular" },
-    ]
+    ],
   },
   {
     title: "Backend",
@@ -499,7 +544,7 @@ export const skills: IskillCards[] = [
       { icon: AiOutlineConsoleSql, name: "SQL" },
       { icon: SiMongodb, name: "MongoDB" },
       { icon: SiGraphql, name: "GraphQl" },
-    ]
+    ],
   },
   {
     title: "DevOps",
@@ -513,7 +558,7 @@ export const skills: IskillCards[] = [
       { icon: SiJenkins, name: "Jenkins" },
       { icon: SiAnsible, name: "Ansible" },
       { icon: SiKubernetes, name: "Kubernetes" },
-    ]
+    ],
   },
   {
     title: "Other",
@@ -524,9 +569,9 @@ export const skills: IskillCards[] = [
       { icon: SiFigma, name: "Figma" },
       { icon: FaUbuntu, name: "Ubuntu" },
       { icon: SiWix, name: "Wix" },
-    ]
-  }
-]
+    ],
+  },
+];
 
 export const workExp = [
   {
@@ -535,16 +580,17 @@ export const workExp = [
     year: "Feb 2024 - Now!",
     role: "Frontend Dev",
     reference: [],
-    description: "Working on different projects as a frontend dev with Angular, Django. Another project as a webflow developer and webmaster.",
+    description:
+      "Working on different projects as a frontend dev with Angular, Django. Another project as a webflow developer and webmaster.",
     // techs: [],
-    class: 'exp1',
+    class: "exp1",
     color: "#1A5866",
     projects: [
       {
         name: "Finito Pro",
-        link: "https://www.finitopro.ch/"
-      }
-    ]
+        link: "https://www.finitopro.ch/",
+      },
+    ],
   },
   {
     company: "Richtig Service",
@@ -552,10 +598,16 @@ export const workExp = [
     year: "Jan 2023 - Feb 2024",
     // role: "Front-end developer, Transporter, Driver, Assembler, Team Leader",
     role: "Transporter",
-    reference: ["Massimiliano Salihaj", "CEO at Richtig Service", "+41 76 275 35 78", "info@richtigservice.ch"],
-    description: "Deliver the furniture from clients such as Rolf Benz, Natuzzi and Martinuzzi, aswell as orient and organize the job with the client as team leader.",
+    reference: [
+      "Massimiliano Salihaj",
+      "CEO at Richtig Service",
+      "+41 76 275 35 78",
+      "info@richtigservice.ch",
+    ],
+    description:
+      "Deliver the furniture from clients such as Rolf Benz, Natuzzi and Martinuzzi, aswell as orient and organize the job with the client as team leader.",
     // techs: [<AiOutlineHtml5 key={0} />, <FaCss3Alt key={0} />, <SiFigma key={0} />, <SiWindows key={0} />, <GiSteeringWheel key={0} />, <FaPeopleCarry key={0} />, <IoIosPeople key={0} />],
-    class: 'exp1',
+    class: "exp1",
     color: "#1A5866",
     // projects: [
     //   {
@@ -569,31 +621,43 @@ export const workExp = [
     website: "https://pickwings.ch/en/",
     year: "Feb 2022 - Jul 2022",
     role: "Frontend Dev, Designer",
-    reference: ["Carlos Martinho", "Senior Software Engineer at Pickwings", "+41 078 742 20 51", "carlos@pickwings.ch"],
-    description:'Diverse Front End implementations, analize and debug, manipulation and testing REST API, design and improve Fahrerzentrale and respective mobile optimizations.',
+    reference: [
+      "Carlos Martinho",
+      "Senior Software Engineer at Pickwings",
+      "+41 078 742 20 51",
+      "carlos@pickwings.ch",
+    ],
+    description:
+      "Diverse Front End implementations, analize and debug, manipulation and testing REST API, design and improve Fahrerzentrale and respective mobile optimizations.",
     // techs: [<SiAngular key={0} />, <SiDjango key={0} />, <SiTypescript key={0} />, <AiOutlineHtml5 key={0} />, <FaCss3Alt key={0} />, <SiJavascript key={0} />, <SiPython key={0} />, <SiDocker key={0} />, <SiFigma key={0} />, <SiNodedotjs key={0} />, <FaGitAlt key={0} />, <SiGitlab key={0} />, <FaUbuntu key={0} />, <SiYarn key={0} />, <SiAdobephotoshop key={0} />,],
-    class: 'exp2',
+    class: "exp2",
     color: "#1A5866",
     projects: [
       {
         name: "Fahrerzentrale",
-        link: "https://fahrerzentrale.ch/"
+        link: "https://fahrerzentrale.ch/",
       },
       {
         name: "Pickwings",
-        link: "https://pickwings.ch/"
+        link: "https://pickwings.ch/",
       },
-    ]
+    ],
   },
   {
     company: "Helping Hand",
     website: "https://www.helpinghand.ch/",
     year: "Apr 2020 - Dez 2021",
     role: "Mover, Driver, Assembler",
-    reference: ["Michael Silbermann", "CEO at Helping Hand", "+41 043 443 17 37", "info@helpinghand.ch"],
-    description: 'My tasks was of what you would expect from a moving company, carry stuff from one house to another, also did tasks such as driver, storage manager,team leader and furniture assembler.',
+    reference: [
+      "Michael Silbermann",
+      "CEO at Helping Hand",
+      "+41 043 443 17 37",
+      "info@helpinghand.ch",
+    ],
+    description:
+      "My tasks was of what you would expect from a moving company, carry stuff from one house to another, also did tasks such as driver, storage manager,team leader and furniture assembler.",
     // techs: [<SiJoomla key={0} />, <AiOutlineHtml5 key={0} />, <FaCss3Alt key={0} />, <SiFigma key={0} />, <SiWindows key={0} />, <GiSteeringWheel key={0} />, <FaPeopleCarry key={0} />, <IoIosPeople key={0} />],
-    class: 'exp3',
+    class: "exp3",
     color: "#1A5866",
     // projects: [
     //   {
@@ -607,35 +671,41 @@ export const workExp = [
     website: "https://feinheit.ch/",
     year: "Aug 2019 - Feb 2020",
     role: "Frontend dev",
-    reference: ["Matthias Kestenholz", "Partner and Software Engineer at Feinheit", "+41 094 79 78 96", "mk@feinheit.ch"],
-    description: 'With only 2 months of starting the developer route I was hired in a internship by the awsome company Feinheit and had the oportunity to work as a frontend engineer on diversed projects.',
+    reference: [
+      "Matthias Kestenholz",
+      "Partner and Software Engineer at Feinheit",
+      "+41 094 79 78 96",
+      "mk@feinheit.ch",
+    ],
+    description:
+      "With only 2 months of starting the developer route I was hired in a internship by the awsome company Feinheit and had the oportunity to work as a frontend engineer on diversed projects.",
     // techs: [<SiAngular key={0} />, <SiDjango key={0} />, <AiOutlineHtml5 key={0} />, <FaCss3Alt key={0} />, <SiJavascript key={0} />, <SiPython key={0} />, <SiDocker key={0} />, <SiNodedotjs key={0} />, <FaGitAlt key={0} />, <SiGitlab key={0} />, <FaUbuntu key={0} />, <SiYarn key={0} />],
-    class: 'exp4',
+    class: "exp4",
     color: "#1A5866",
     projects: [
       {
         name: "FC Zürich",
-        link: "https://www.fcz.ch/en"
+        link: "https://www.fcz.ch/en",
       },
       {
         name: "Feinheit",
-        link: "https://feinheit.ch/"
+        link: "https://feinheit.ch/",
       },
       {
         name: "Mehr bezahlbare Wohnungen",
-        link: "https://feinheit.ch/projekte/mehr-bezahlbare-wohnungen/"
+        link: "https://feinheit.ch/projekte/mehr-bezahlbare-wohnungen/",
       },
       {
         name: "Limmatstadt",
-        link: "https://www.limmatstadt.ch/"
+        link: "https://www.limmatstadt.ch/",
       },
       {
         name: "Protier",
-        link: "https://www.protier.ch/"
+        link: "https://www.protier.ch/",
       },
-    ]
+    ],
   },
-]
+];
 
 export const projects = [
   {
@@ -644,11 +714,11 @@ export const projects = [
     title: "Little Lemon Restaurant",
     link: "https://coursera-little-lemon.vercel.app/",
     github: "https://github.com/lordrichard6/coursera_capstone_proj",
-    type: 'personal',
-    date: '2024/05',
+    type: "personal",
+    date: "2024/05",
     featured: false,
-    tags: ['#react', "#typescript"],
-    project_type:"Restaurant Website",
+    tags: ["#react", "#typescript"],
+    project_type: "Restaurant Website",
   },
   {
     image: portfolio22,
@@ -656,9 +726,9 @@ export const projects = [
     title: "Portfolio 2022",
     link: "https://pauloreizinho.vercel.app/",
     github: "https://github.com/lordrichard6/portfolio21",
-    type: 'personal',
-    date: '2022/06',
-    tags: ['#react', '#tailwind'],
+    type: "personal",
+    date: "2022/06",
+    tags: ["#react", "#tailwind"],
     project_type: "Portfolio",
   },
   {
@@ -667,9 +737,9 @@ export const projects = [
     title: "Angry Fish",
     link: "https://angry-fish.vercel.app/",
     github: "https://github.com/lordrichard6/angry_fish",
-    type: 'personal',
-    date: '2024/04',
-    tags: ['#react', '#AppWrite'],
+    type: "personal",
+    date: "2024/04",
+    tags: ["#react", "#AppWrite"],
     project_type: "Social Media App",
   },
   {
@@ -678,9 +748,9 @@ export const projects = [
     title: "ThinkBig",
     link: "https://think-big.vercel.app/",
     github: "https://github.com/lordrichard6/think_big",
-    type: 'personal',
-    date: '2023/04',
-    tags: ['#react', '#tailwind'],
+    type: "personal",
+    date: "2023/04",
+    tags: ["#react", "#tailwind"],
     project_type: "Website",
   },
   {
@@ -689,9 +759,9 @@ export const projects = [
     title: "FahrerZentrale",
     link: "https://fahrerzentrale.ch/en/landing",
     github: "",
-    type: 'profissional',
-    date: '2022/06',
-    tags: ['#angular', '#django'],
+    type: "profissional",
+    date: "2022/06",
+    tags: ["#angular", "#django"],
     project_type: "Job Platform",
   },
   {
@@ -700,9 +770,9 @@ export const projects = [
     title: "Pickwings",
     link: "https://pickwings.ch/de/",
     github: "",
-    type: 'profissional',
-    date: '2022/05',
-    tags: ['#angular', '#django'],
+    type: "profissional",
+    date: "2022/05",
+    tags: ["#angular", "#django"],
     project_type: "Courier App",
   },
   {
@@ -711,9 +781,9 @@ export const projects = [
     title: "Helping Hand",
     link: "https://www.helpinghand.ch/",
     github: "",
-    type: 'profissional',
-    date: '2021/06',
-    tags: ['#joomla'],
+    type: "profissional",
+    date: "2021/06",
+    tags: ["#joomla"],
     project_type: "Website",
   },
   {
@@ -722,9 +792,9 @@ export const projects = [
     title: "FastRent",
     link: "https://lordrichard-rentfast.netlify.app/",
     github: "https://github.com/lordrichard6/rent-fast",
-    type: 'personal',
-    date: '2021/06',
-    tags: ['#reactjs', '#typescript'],
+    type: "personal",
+    date: "2021/06",
+    tags: ["#reactjs", "#typescript"],
     project_type: "Website",
   },
   {
@@ -733,9 +803,9 @@ export const projects = [
     title: "Hulu clone",
     link: "https://hulu-clone-rosy.vercel.app/",
     github: "https://github.com/lordrichard6/hulu_clone",
-    type: 'personal',
-    date: '2021/04',
-    tags: ['#nextjs', '#tailwind'],
+    type: "personal",
+    date: "2021/04",
+    tags: ["#nextjs", "#tailwind"],
     project_type: "Movies Database",
   },
   {
@@ -744,9 +814,9 @@ export const projects = [
     title: "Monkey Circus",
     link: "https://monkeycircus-2z4e865i4.now.sh",
     github: "https://github.com/lordrichard6/monkeycircus",
-    type: 'personal',
-    date: '2020/03',
-    tags: ['#nextjs', '#typescript'],
+    type: "personal",
+    date: "2020/03",
+    tags: ["#nextjs", "#typescript"],
     project_type: "E-commerce",
   },
   {
@@ -755,9 +825,9 @@ export const projects = [
     title: "Limmatstadt",
     link: "https://www.limmatstadt.ch/",
     github: "",
-    type: 'profissional',
-    date: '2020/02',
-    tags: ['#angular', '#django'],
+    type: "profissional",
+    date: "2020/02",
+    tags: ["#angular", "#django"],
     project_type: "Website",
   },
   {
@@ -766,9 +836,9 @@ export const projects = [
     title: "Protier",
     link: "https://www.protier.ch/",
     github: "",
-    type: 'profissional',
-    date: '2020/01',
-    tags: ['#angular', '#django'],
+    type: "profissional",
+    date: "2020/01",
+    tags: ["#angular", "#django"],
     project_type: "Website",
   },
   {
@@ -777,9 +847,9 @@ export const projects = [
     title: "Bezahlbare Wohnungen",
     link: "https://feinheit.ch/projekte/mehr-bezahlbare-wohnungen/",
     github: "",
-    type: 'profissional',
-    date: '2019/11',
-    tags: ['#angular', '#django'],
+    type: "profissional",
+    date: "2019/11",
+    tags: ["#angular", "#django"],
     project_type: "Campaign Website",
   },
   {
@@ -788,9 +858,9 @@ export const projects = [
     title: "Feinheit",
     link: "https://feinheit.ch/",
     github: "",
-    type: 'profissional',
-    date: '2019/10',
-    tags: ['#angular', '#django'],
+    type: "profissional",
+    date: "2019/10",
+    tags: ["#angular", "#django"],
     project_type: "Website",
   },
   {
@@ -799,9 +869,9 @@ export const projects = [
     title: "FCZ Website",
     link: "https://www.fcz.ch/",
     github: "",
-    type: 'profissional',
-    date: '2019/08',
-    tags: ['#angular', '#django'],
+    type: "profissional",
+    date: "2019/08",
+    tags: ["#angular", "#django"],
     project_type: "Website, E-shop",
   },
 ];
