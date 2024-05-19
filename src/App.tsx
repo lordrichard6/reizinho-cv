@@ -183,8 +183,9 @@ const App: React.FC = () => {
           </div>
         </div>
       </section>
-      <section className='min-h-[60vh] bg-dark-color-01'>
 
+      <section className='min-h-[60vh] bg-dark-color-01'>
+        <h1 className='text-light-color-01 mb-10 text-center'>Soft Skills</h1>   
       </section>
       <section className='min-h-[60vh] bg-light-color-01'>
 
