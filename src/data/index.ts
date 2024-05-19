@@ -310,7 +310,7 @@ export const certifications = [
     language: "",
     tags: "",
     showSkills: false,
-    skills: [""],
+    skills: ["Create a simple form with a responsive layout using HTML5 and CSS.","Create a responsive layout using CSS.","Create a UI using Bootstrap.","Implement debugging tools."],
     id: "8",
   },
   {
@@ -321,7 +321,7 @@ export const certifications = [
     language: "",
     tags: "",
     showSkills: false,
-    skills: [""],
+    skills: ["Creating simple JavaScript codes.","Creating and manipulating objects and arrays.","Writing unit tests using Jest."],
     id: "9",
   },
   {
@@ -332,7 +332,7 @@ export const certifications = [
     language: "",
     tags: "",
     showSkills: false,
-    skills: [""],
+    skills: ["Implement Version Control systems.","Navigate and configure using the command line.","Use a GitHub repository. Create a GitHub repository.","Manage code revisions"],
     id: "10",
   },
   {
@@ -343,7 +343,7 @@ export const certifications = [
     language: "",
     tags: "",
     showSkills: false,
-    skills: [""],
+    skills: ["Use reusable components to render views where data changes over time.","Organize React projects to create more scalable and maintainable websites and apps.","Use props to pass data between components. Create dynamic and interactive web pages and apps.","Use forms to allow users to interact with the app. Build an application in React."],
     id: "11",
   },
   {
@@ -354,7 +354,7 @@ export const certifications = [
     language: "",
     tags: "",
     showSkills: false,
-    skills: [""],
+    skills: ["Create robust and reusable components with advanced techniques and learn different patterns to reuse common behavior.","Interact with a remote server and fetch and post data via an API.","Seamlessly test React applications with React Testing Library.","Integrate commonly used React libraries to streamline your application development."],
     id: "12",
   },
   {
@@ -365,8 +365,19 @@ export const certifications = [
     language: "",
     tags: "",
     showSkills: false,
-    skills: [""],
+    skills: ["Describe the fundamentals of User Experience (UX) design and research.","Describe accessibility considerations in design.","Practice developing user empathy through research.","Create wireframes and prototypes in Figma."],
     id: "13",
+  },
+  {
+    title: "Front-End Developer Capstone",
+    school: "Meta",
+    image: meta,
+    link: "",
+    language: "",
+    tags: "",
+    showSkills: false,
+    skills: ["Design and style a responsive User Interface (UI)","Demonstrate clean and bug free coding","Use React components to create multiple views","Create a website front-end using React JS and JavaScript"],
+    id: "14",
   },
 ];
 
