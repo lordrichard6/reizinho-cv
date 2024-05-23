@@ -617,6 +617,10 @@ export const workExp = [
         name: "Finito Pro",
         link: "https://www.finitopro.ch/",
       },
+      {
+        name: "CargoFlow",
+        link: "https://www.cargoflow.ch/",
+      },
     ],
   },
   {
