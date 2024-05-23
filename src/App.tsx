@@ -1,4 +1,4 @@
-// import { useState } from "react";
+import { useEffect } from "react";
 import { motion, useScroll } from 'framer-motion';
 import { Link } from 'react-scroll';
 
