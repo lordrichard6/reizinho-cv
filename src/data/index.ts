@@ -35,6 +35,8 @@ import {
 import { AiOutlineConsoleSql, AiOutlineHtml5 } from "react-icons/ai";
 import { FaCss3Alt, FaGitAlt, FaUbuntu } from "react-icons/fa";
 
+import cargoflow from "../assets/img/proj/cargoflow.png";
+import finito from "../assets/img/proj/finito.png";
 import littleLemon from "../assets/img/proj/littleLemon.png";
 import portfolio22 from "../assets/img/proj/portfolio23.png";
 import angryFish from "../assets/img/proj/angryfish.png";
@@ -65,6 +67,7 @@ interface SocialMedia {
 export interface Tech {
   icon: IconType;
   name: string;
+  color?: string;
 }
 
 interface IskillCards {
@@ -549,53 +552,53 @@ export const skills: IskillCards[] = [
     title: "Frontend",
     cardColor: "bg-[#879EAD]",
     techs: [
-      { icon: AiOutlineHtml5, name: "HTML" },
-      { icon: FaCss3Alt, name: "CSS" },
-      { icon: SiJavascript, name: "Javascript" },
-      { icon: SiTypescript, name: "Typescript" },
-      { icon: SiJquery, name: "JQuery" },
-      { icon: SiReact, name: "React" },
-      { icon: SiNextdotjs, name: "Next.js" },
-      { icon: SiAngular, name: "Angular" },
+      { icon: AiOutlineHtml5, name: "HTML", color: "" },
+      { icon: FaCss3Alt, name: "CSS", color: "" },
+      { icon: SiJavascript, name: "Javascript", color: "text-[#FFBF00]" },
+      { icon: SiTypescript, name: "Typescript", color: "" },
+      { icon: SiJquery, name: "JQuery", color: "" },
+      { icon: SiReact, name: "React", color: "text-[#0E46A3]" },
+      { icon: SiNextdotjs, name: "Next.js", color: "text-[#151515]" },
+      { icon: SiAngular, name: "Angular", color: "text-[#C40C0C]" },
     ],
   },
   {
     title: "Backend",
     cardColor: "bg-[#1A5866]",
     techs: [
-      { icon: SiPython, name: "Python" },
-      { icon: SiDjango, name: "Django" },
-      { icon: SiNodedotjs, name: "Node" },
-      { icon: SiExpress, name: "Express.js" },
-      { icon: SiPostgresql, name: "Post" },
-      { icon: AiOutlineConsoleSql, name: "SQL" },
-      { icon: SiMongodb, name: "MongoDB" },
-      { icon: SiGraphql, name: "GraphQl" },
+      { icon: SiPython, name: "Python", color: "text-[#40A578]" },
+      { icon: SiDjango, name: "Django", color: "" },
+      { icon: SiNodedotjs, name: "Node", color: "" },
+      { icon: SiExpress, name: "Express.js", color: "" },
+      { icon: SiPostgresql, name: "Post", color: "" },
+      { icon: AiOutlineConsoleSql, name: "SQL", color: "" },
+      { icon: SiMongodb, name: "MongoDB", color: "" },
+      { icon: SiGraphql, name: "GraphQl", color: "" },
     ],
   },
   {
     title: "DevOps",
     cardColor: "bg-[#776C62]",
     techs: [
-      { icon: FaGitAlt, name: "Git" },
-      { icon: SiDocker, name: "Docker" },
-      { icon: SiGithub, name: "Github" },
-      { icon: SiNpm, name: "NPM" },
-      { icon: SiYarn, name: "yarn" },
-      { icon: SiJenkins, name: "Jenkins" },
-      { icon: SiAnsible, name: "Ansible" },
-      { icon: SiKubernetes, name: "Kubernetes" },
+      { icon: FaGitAlt, name: "Git", color: "" },
+      { icon: SiDocker, name: "Docker", color: "" },
+      { icon: SiGithub, name: "Github", color: "" },
+      { icon: SiNpm, name: "NPM", color: "" },
+      { icon: SiYarn, name: "yarn", color: "" },
+      { icon: SiJenkins, name: "Jenkins", color: "" },
+      { icon: SiAnsible, name: "Ansible", color: "" },
+      { icon: SiKubernetes, name: "Kubernetes", color: "" },
     ],
   },
   {
     title: "Other",
     cardColor: "bg-[#99958E]",
     techs: [
-      { icon: SiAdobephotoshop, name: "Photoshop" },
-      { icon: SiAdobepremierepro, name: "Premiere pro" },
-      { icon: SiFigma, name: "Figma" },
-      { icon: FaUbuntu, name: "Ubuntu" },
-      { icon: SiWix, name: "Wix" },
+      { icon: SiAdobephotoshop, name: "Photoshop", color: "" },
+      { icon: SiAdobepremierepro, name: "Premiere pro", color: "" },
+      { icon: SiFigma, name: "Figma", color: "" },
+      { icon: FaUbuntu, name: "Ubuntu", color: "" },
+      { icon: SiWix, name: "Wix", color: "" },
     ],
   },
 ];
@@ -739,6 +742,30 @@ export const workExp = [
 ];
 
 export const projects = [
+  {
+    image: cargoflow,
+    alt: "cargoflow app",
+    title: "CargoFlow",
+    link: "https://www.cargoflow.ch/",
+    github: "",
+    type: "profissional",
+    date: "2024/05",
+    featured: false,
+    tags: ["#angular", "#typescript", "#django"],
+    project_type: "Webapp for tranportation of products",
+  },
+  {
+    image: finito,
+    alt: "finito pro app",
+    title: "Finito Pro",
+    link: "https://www.finitopro.ch/",
+    github: "",
+    type: "profissional",
+    date: "2024/05",
+    featured: false,
+    tags: ["#angular", "#typescript", "#django"],
+    project_type: "Webapp for companies internal organization",
+  },
   {
     image: littleLemon,
     alt: "Little Lemon Restaurant",

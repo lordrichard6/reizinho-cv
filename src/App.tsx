@@ -12,8 +12,24 @@ import ProjectCard from "./components/ProjectCard";
 import EducationCard from "./components/EducationCard";
 
 
+
 const App: React.FC = () => {
   const { scrollYProgress } = useScroll();
+
+  // const showTechs = {
+  //     js: skills[0].techs.find(tech => tech.name === "Javascript"),
+  // }
+  const progLang = [
+    skills[0].techs.find(tech => tech.name === "Javascript"),
+    skills[1].techs.find(tech => tech.name === "Python"),
+  ]
+  const progFra = [
+    skills[0].techs.find(tech => tech.name === "React"),
+    skills[0].techs.find(tech => tech.name === "Next.js"),
+    skills[0].techs.find(tech => tech.name === "Angular"),
+  ]
+
+
 
 
   return (
@@ -62,41 +78,93 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      <section className='education-section flex items-center justify-around flex-col min-h-screen bg-dark-color-01 text-light-color-01 py-20'>
-        <h1 className='mb-'>Education</h1>
-        <div className="flex-centered flex-col h-full w-full mb-10">
+      <section className='education-section flex-centered min-h-screen bg-dark-color-01 text-light-color-01 py-20'>
+        <div className="section-width-default flex items-center justify-around flex-col">
 
-          <div className="flex-centered gap-2 mb-4 lg:mb-10">
-            <hr className='w-20 lg:w-40' />
-            <h2>Degrees</h2>
-            <hr className='w-20 lg:w-40' />
+          <h1 className='mb-'>Education</h1>
+
+          <div className="degrees flex-centered flex-col h-full w-full mb-10">
+            <div className="flex-centered gap-2 mb-4 lg:mb-10">
+              <hr className='w-20 lg:w-40' />
+              <h2>Degrees</h2>
+              <hr className='w-20 lg:w-40' />
+            </div>
+            <p className='mb-8'>Three years of study with a top grade and practical knowledge in accounting and management is a very good background to get into the software engineering world.</p>
+            <EducationCard
+              id={degrees.id}
+              title={degrees.title}
+              skills={degrees.skills}
+              image={degrees.image}
+              school={degrees.school}
+              link={degrees.link}
+            />
           </div>
-          <EducationCard
-            id={degrees.id}
-            title={degrees.title}
-            skills={degrees.skills}
-            image={degrees.image}
-            school={degrees.school}
-            link={degrees.link}
-          />
+
+          <div className="certificates flex-centered flex-col h-full">
+            <div className="flex-centered gap-2">
+              <hr className='w-20 lg:w-40' />
+              <h2>Certificates</h2>
+              <hr className='w-20 lg:w-40' />
+            </div>
+            <p className='mt-8'>Here I gather all my certifications achieved over the years of study related to Software Engineering and developemnt, done in online platforms such as Coursera, Udemy and FreeCodeCamp.</p>
+            <div className="grid lg:grid-cols-4 gap-4 mt-10">
+              {certifications.map((data) => {
+                return (
+                  <EducationCard
+                    id={data.id}
+                    title={data.title}
+                    skills={data.skills}
+                    image={data.image}
+                    school={data.school}
+                    link={data.link}
+                  />
+                )
+              })}
+            </div>
+          </div>
         </div>
 
-        <div className="flex-centered flex-col h-full">
-          <div className="flex-centered gap-2">
-            <hr className='w-20 lg:w-40' />
-            <h2>Certificates</h2>
-            <hr className='w-20 lg:w-40' />
+      </section>
+
+      <section className='skills-section flex-centered min-h-[60vh] bg-light-color-01 text-light-color-01 py-20'>
+        <div className="section-width-default flex-centered flex-col">
+          <h1 className='text-dark-color-01 mb-10'>Skills</h1>
+
+          <p className='text-dark-color-01'>The skills below are the ones I'm more experieced.</p>
+          <div className="proefficient w-full flex flex-col lg:flex-row justify-evenly">
+            <div className="text-dark-color-01 my-10">
+              <h2>Programming Languages</h2>
+              <div className="">
+                {progLang.map((tech) => (
+                  <span key={tech?.name} className="flex items-center my-2">
+                    <tech.icon className={`text-4xl mr-2 rounded-lg ${tech?.color}`} /><h2>{tech?.name}</h2>
+                  </span>
+                ))}
+              </div>
+
+            </div>
+            <div className="text-dark-color-01 my-10">
+              <h2>Frameworks</h2>
+              <div className="">
+                {progFra.map((tech) => (
+                  <span key={tech?.name} className="flex items-center my-2">
+                    <tech.icon className={`text-4xl mr-2 rounded-lg ${tech?.color}`} /><h2>{tech?.name}</h2>
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
-          <div className="grid lg:grid-cols-4 gap-4 mt-10">
-            {certifications.map((data) => {
+
+          <p className='text-dark-color-01 my-8'>Behind these cards are grouped all the technical skills I have knowledge about or experienced professionaly.</p>
+          <div style={{ perspective: '1000px' }} className="flex-centered flex-col lg:flex-row gap-6">
+            {skills.map((skill) => {
               return (
-                <EducationCard
-                  id={data.id}
-                  title={data.title}
-                  skills={data.skills}
-                  image={data.image}
-                  school={data.school}
-                  link={data.link}
+                <SkillCard
+                  key={skill.title}
+                  cardColor={skill.cardColor}
+                  cardType={skill.title}
+                  title={skill.title}
+                  techs={skill.techs}
                 />
               )
             })}
@@ -105,26 +173,11 @@ const App: React.FC = () => {
 
       </section>
 
-      <section className='skills-section flex-centered flex-col min-h-[60vh] bg-light-color-01 text-light-color-01 py-20'>
-        <h1 className='text-dark-color-01 mb-10'>Skills</h1>
-        <div style={{ perspective: '1000px' }} className="flex-centered flex-col lg:flex-row gap-6">
-          {skills.map((skill) => {
-            return (
-              <SkillCard
-                key={skill.title}
-                cardColor={skill.cardColor}
-                cardType={skill.title}
-                title={skill.title}
-                techs={skill.techs}
-              />
-            )
-          })}
-        </div>
-
-      </section>
-
       <section className='experience-section min-h-screen flex flex-col bg-light-color-02 py-20'>
         <h1 className='text-dark-color-01 mb-10 text-center'>Profissional Experience</h1>
+        <div className="section-width-default mx-auto">
+          <p className=''>During my path to achieving my dream, become a developer I worked in different areas, the most relevant were, the internship at Feinheit at the beginning of my journey and Frontend Dev at Pickwings at a later stage of my game.</p>
+        </div>
         <div className="relative">
           {
             workExp.length > 0 && (
@@ -141,6 +194,11 @@ const App: React.FC = () => {
 
       <section className='projects-section flex flex-col items-center justify-evenly min-h-[60vh] bg-beje-color py-20'>
         <h1 className='text-light-color-02 mb-10 text-center'>Projects</h1>
+        <div className="section-width-default mx-auto mb-6 text-light-color-02">
+          <p>Here are the most relevant projects I've worked on related to web/software developemnt.</p>
+          <br />
+          <p>On the left are the personal projects I've built, either on a course or on my own, showing my creativity and capacity to deliver. On the right side are the projects I've built and/or supported on a professional enviroment, with cooperation with a team of designers and developers throught my journey.</p>
+        </div>
         <div className="section-width-default flex justify-evenly">
           <div className="personal w-1/2">
             <h2 className='text-light-color-02 text-center mb-6'>Personal</h2>
