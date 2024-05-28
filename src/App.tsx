@@ -22,15 +22,12 @@ const App: React.FC = () => {
   const progLang = [
     skills[0].techs.find(tech => tech.name === "Javascript"),
     skills[1].techs.find(tech => tech.name === "Python"),
-  ]
+  ];
   const progFra = [
     skills[0].techs.find(tech => tech.name === "React"),
     skills[0].techs.find(tech => tech.name === "Next.js"),
     skills[0].techs.find(tech => tech.name === "Angular"),
-  ]
-
-
-
+  ];
 
   return (
     <main>
@@ -135,7 +132,7 @@ const App: React.FC = () => {
             <div className="text-dark-color-01 my-10">
               <h2>Programming Languages</h2>
               <div className="">
-                {progLang.map((tech) => (
+                {progLang.map((tech) => tech && (
                   <span key={tech?.name} className="flex items-center my-2">
                     <tech.icon className={`text-4xl mr-2 rounded-lg ${tech?.color}`} /><h2>{tech?.name}</h2>
                   </span>
@@ -146,9 +143,10 @@ const App: React.FC = () => {
             <div className="text-dark-color-01 my-10">
               <h2>Frameworks</h2>
               <div className="">
-                {progFra.map((tech) => (
-                  <span key={tech?.name} className="flex items-center my-2">
-                    <tech.icon className={`text-4xl mr-2 rounded-lg ${tech?.color}`} /><h2>{tech?.name}</h2>
+                {progFra.map((tech) => tech && (
+                  <span key={tech.name} className="flex items-center my-2">
+                    <tech.icon className={`text-4xl mr-2 rounded-lg ${tech.color}`} />
+                    <h2>{tech.name}</h2>
                   </span>
                 ))}
               </div>
