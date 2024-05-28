@@ -13,13 +13,13 @@ const SkillCard: React.FC<TySkillCard> = ({ cardColor, cardType, title, techs })
     };
 
     return (
-        <div className={`skill-card flex-centered relative w-[350px] h-[300px] lg:h-[514px] ${cardType} ${isFlipped ? 'is-flipped' : ''}`}>
+        <div className={`skill-card flex-centered relative w-[350px] h-[300px] lg:h-[514px] lg:max-h-[514px] ${cardType} ${isFlipped ? 'is-flipped' : ''}`}>
             <div onClick={handleButtonClick} className={`card-face front flex-centered rounded-lg cursor-pointer ${cardColor}`}>
                 <h2>{title}</h2>
             </div>
-            <div ref={constraintsRef} className={`card-face back flex-centered rounded-lg p-10 ${cardColor}`}>
+            <div ref={constraintsRef} className={`card-face back flex-centered rounded-lg p-10 relative ${cardColor}`}>
+                <TiArrowBack onClick={handleButtonClick} className='absolute top-0 right-0 text-6xl cursor-pointer' />
                 <motion.div className="flex-centered flex-wrap relative">
-                <TiArrowBack onClick={handleButtonClick} className='absolute -top-20 -right-6 lg:-top-48 lg:-right-8 text-6xl cursor-pointer' />
                     {techs.map((tech: Tech) => {
                         return (
                             <motion.div drag dragElastic={0.2} dragConstraints={constraintsRef} className='text-4xl border-solid border-2 text-slate-50 rounded-xl p-2 m-1 cursor-pointer' key={tech.name}>

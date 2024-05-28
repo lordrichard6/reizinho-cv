@@ -4,7 +4,7 @@ import { TfiInstagram } from "react-icons/tfi";
 import { PiGithubLogoFill, PiWhatsappLogoLight } from "react-icons/pi";
 import { IoMdHome } from "react-icons/io";
 import { LuPhoneCall } from "react-icons/lu";
-import { RiMailSendLine } from "react-icons/ri";
+import { RiBootstrapFill, RiMailSendLine } from "react-icons/ri";
 import {
   SiSitepoint,
   SiJavascript,
@@ -31,6 +31,8 @@ import {
   SiAdobepremierepro,
   SiFigma,
   SiWix,
+  SiSvelte,
+  SiRedux,
 } from "react-icons/si";
 import { AiOutlineConsoleSql, AiOutlineHtml5 } from "react-icons/ai";
 import { FaCss3Alt, FaGitAlt, FaUbuntu } from "react-icons/fa";
@@ -56,6 +58,7 @@ import fcz from "../assets/img/proj/fcz.png";
 import udemy from "../assets/img/udemy-logo.png";
 import meta from "../assets/img/meta-logo.png";
 import freecodecamp from "../assets/img/freecodecamp-logo.png";
+import { TbBrandFramerMotion } from "react-icons/tb";
 
 
 interface SocialMedia {
@@ -560,6 +563,10 @@ export const skills: IskillCards[] = [
       { icon: SiReact, name: "React", color: "text-[#0E46A3]" },
       { icon: SiNextdotjs, name: "Next.js", color: "text-[#151515]" },
       { icon: SiAngular, name: "Angular", color: "text-[#C40C0C]" },
+      { icon: SiSvelte, name: "Svelte", color: "" },
+      { icon: SiRedux, name: "Redux", color: "" },
+      { icon: TbBrandFramerMotion, name: "Framer Motion", color: "" },
+      { icon: RiBootstrapFill, name: "Bootstrap", color: "" },
     ],
   },
   {
