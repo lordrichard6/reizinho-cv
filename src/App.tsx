@@ -1,6 +1,6 @@
 // import { useEffect } from "react";
 import { motion, useScroll } from 'framer-motion';
-import { Link } from 'react-scroll';
+// import { Link } from 'react-scroll';
 
 import './globals.scss'
 import { certifications, socialMedia, contact, skills, workExp, projects, degrees } from './data'
@@ -40,7 +40,7 @@ const App: React.FC = () => {
           <div className=" flex justify-center flex-col max-w-[500px] gap-4 lg:gap-9 order-2">
             <h1>Hi, I'm Paulo</h1>
             <p className=''>I am a <strong>frontend developer</strong>, <strong>UX/UI designer</strong> and a <strong>digital marketing enthusiast</strong> who is thorough in his profession. In the evenings and weekends I am an adventurer and bon vivant.</p>
-            <button className='bg-dark-color-02 text-light-color-01 w-fit py-3 px-6 rounded-3xl standart-hover standart-animation mx-auto lg:mx-0'><Link to="contact" >Know more</Link></button>
+            <button className='bg-dark-color-02 text-light-color-01 w-fit py-3 px-6 rounded-3xl standart-hover standart-animation mx-auto lg:mx-0'><a href="https://drive.google.com/file/d/1b__2jLmVgV_pXl-1N-KAbcG0IwNW-UeP/view?usp=drive_link" target="_blank">CV in PDF</a></button>
           </div>
           <div className="lg:order-2">
             <img className='w-[500px]' src={paulo_header} alt="" />
