@@ -129,7 +129,8 @@ const App: React.FC = () => {
               <div className="">
                 {progLang.map((tech) => tech && (
                   <span key={tech?.name} className="flex items-center my-2">
-                    <tech.icon className={`text-4xl mr-2 rounded-lg ${tech?.color}`} /><h2>{tech?.name}</h2>
+                    <tech.icon className={`text-4xl mr-2 rounded-lg ${tech?.color}`} />
+                    <h3>{tech?.name}</h3>
                   </span>
                 ))}
               </div>
@@ -141,7 +142,7 @@ const App: React.FC = () => {
                 {progFra.map((tech) => tech && (
                   <span key={tech.name} className="flex items-center my-2">
                     <tech.icon className={`text-4xl mr-2 rounded-lg ${tech.color}`} />
-                    <h2>{tech.name}</h2>
+                    <h3>{tech.name}</h3>
                   </span>
                 ))}
               </div>
