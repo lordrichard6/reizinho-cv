@@ -1,5 +1,5 @@
 // import { useEffect } from "react";
-import { motion, useScroll } from 'framer-motion';
+// import { motion } from 'framer-motion';
 // import { Link } from 'react-scroll';
 
 import './globals.scss'
@@ -14,7 +14,6 @@ import EducationCard from "./components/EducationCard";
 
 
 const App: React.FC = () => {
-  const { scrollYProgress } = useScroll();
 
   // const showTechs = {
   //     js: skills[0].techs.find(tech => tech.name === "Javascript"),
@@ -31,10 +30,6 @@ const App: React.FC = () => {
 
   return (
     <main>
-      <motion.div
-        className="scroll-progress fixed top-0 w-screen h-4 bg-[#1A5866] z-50"
-        style={{ scaleX: scrollYProgress }}
-      />
       <header className='min-h-screen flex-centered pb-20'>
         <div className="section-width-default flex flex-col gap-4 lg:flex-row justify-between h-full">
           <div className=" flex justify-center flex-col max-w-[500px] gap-4 lg:gap-9 order-2">
