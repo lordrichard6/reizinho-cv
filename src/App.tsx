@@ -25,6 +25,7 @@ const App: React.FC = () => {
     skills[0].techs.find(tech => tech.name === "React"),
     skills[0].techs.find(tech => tech.name === "Next.js"),
     skills[0].techs.find(tech => tech.name === "Angular"),
+    skills[1].techs.find(tech => tech.name === "Django"),
   ];
 
   return (
@@ -33,7 +34,7 @@ const App: React.FC = () => {
         <div className="section-width-default flex flex-col gap-4 lg:flex-row justify-between h-full">
           <div className=" flex justify-center flex-col max-w-[500px] gap-4 lg:gap-9 order-2">
             <h1>Hi, I'm Paulo</h1>
-            <p className=''>I am a <strong>frontend developer</strong>, <strong>UX/UI designer</strong> and a <strong>digital marketing enthusiast</strong> who is thorough in his profession. In the evenings and weekends I am an adventurer and bon vivant.</p>
+            <p className=''>I am a <strong>fullstack developer</strong>, <strong>UX/UI designer</strong> and a <strong>digital marketing enthusiast</strong> who is thorough in his profession. In the evenings and weekends I am an adventurer and bon vivant.</p>
             <button className='bg-dark-color-02 text-light-color-01 w-fit py-3 px-6 rounded-3xl standart-hover standart-animation mx-auto lg:mx-0'><a href="https://drive.google.com/file/d/1b__2jLmVgV_pXl-1N-KAbcG0IwNW-UeP/view?usp=drive_link" target="_blank">CV in PDF</a></button>
           </div>
           <div className="lg:order-2">
@@ -97,7 +98,7 @@ const App: React.FC = () => {
               <h2>Certificates</h2>
               <hr className='w-20 lg:w-40' />
             </div>
-            <p className='mt-8'>Here I gather all my certifications achieved over the years of study related to Software Engineering and developemnt, done in online platforms such as Coursera, Udemy and FreeCodeCamp.</p>
+            <p className='mt-8'>Here I gather all my certifications achieved over the years of study related to Software Engineering and developemnt, fruit of my sweat, tears and love for code.</p>
             <div className="certificates-highlights max-w-[1040px] w-full my-4">
               <div className="flex items-center gap-2 my-4">
                 <h2>Major Certificates</h2>

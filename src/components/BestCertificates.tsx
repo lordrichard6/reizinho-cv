@@ -27,9 +27,9 @@ const BestCertificates: React.FC<MajorCertificate> = ({ type, courseStatus, logo
                     <img className='w-full rounded-lg' src={certificate} alt="" />
                 </a>
                 :
-                (!certificate && percent > 0) ? <div className='mx-auto' role="progressbar" aria-valuenow={percent} aria-valuemin="0" aria-valuemax="100" style={{ "--value": percent } as React.CSSProperties} />
-                    :
-                    (!certificate && percent === 0) ? <h3 className=''>Coming Soon!!!</h3> : ""
+                (!certificate && percent > 0) ? <div className='mx-auto' role="progressbar" aria-valuenow={percent} aria-valuemin={0} aria-valuemax={100} style={{ "--value": percent } as React.CSSProperties} />
+                :
+                (!certificate && percent === 0) ? <h3 className=''>Coming Soon!!!</h3> : null
             }
             {courses.length > 1 ?
                 <div className="">

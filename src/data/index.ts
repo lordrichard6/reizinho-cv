@@ -703,7 +703,7 @@ export const skills: IskillCards[] = [
     cardColor: "bg-[#1A5866]",
     techs: [
       { icon: SiPython, name: "Python", color: "text-[#40A578]" },
-      { icon: SiDjango, name: "Django", color: "" },
+      { icon: SiDjango, name: "Django", color: "text-[#092E20]" },
       { icon: SiNodedotjs, name: "Node", color: "" },
       { icon: SiExpress, name: "Express.js", color: "" },
       { icon: SiPostgresql, name: "Post", color: "" },
