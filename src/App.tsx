@@ -103,7 +103,7 @@ const App: React.FC = () => {
             <div className="certificates-highlights max-w-[1040px] w-full my-4">
               <div className="flex items-center gap-2 my-4">
                 <h2>Major Certificates</h2>
-                <hr className='w-40 lg:w-64' />
+                <hr className='w-14 lg:w-64' />
               </div>
               {MajorCertificates.map((cert) => (
                 <BestCertificates
@@ -119,6 +119,10 @@ const App: React.FC = () => {
                 />
               ))}
             </div>
+              <div className="flex items-center gap-2 my-4">
+                <h2>Micro Certificates</h2>
+                <hr className='w-14 lg:w-64' />
+              </div>
             <div className="grid lg:grid-cols-4 gap-4 mt-10">
               {certifications.map((data) => {
                 return (

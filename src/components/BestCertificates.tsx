@@ -18,16 +18,16 @@ const BestCertificates: React.FC<MajorCertificate> = ({ type, courseStatus, logo
                 <h4 className='order-1 lg:order-0'>{type}</h4>
                 <h4 className='lg:order-1'>Status: {courseStatus}</h4>
             </div>
-            <div className="flex flex-col lg:flex-row lg:items-center lg:gap-4">
+            <div className="flex flex-col lg:flex-row lg:items-center lg:gap-4 mb-4">
                 <img className='w-60 lg:w-40 mx-auto lg:mx-0' src={logo} alt="" />
-                <h2>{title}</h2>
+                <h2 className='text-center'>{title}</h2>
             </div>
             {certificate ?
                 <a href={certLink} target="_blank" rel="noopener noreferrer" className='flex w-fit mx-auto standart-animation standart-hover my-2'>
                     <img className='w-full rounded-lg' src={certificate} alt="" />
                 </a>
                 :
-                (!certificate && percent > 0) ? <div className='mx-auto' role="progressbar" aria-valuenow={percent} aria-valuemin={0} aria-valuemax={100} style={{ "--value": percent } as React.CSSProperties} />
+                (!certificate && percent > 0) ? <div className='mx-auto my-2' role="progressbar" aria-valuenow={percent} aria-valuemin={0} aria-valuemax={100} style={{ "--value": percent } as React.CSSProperties} />
                 :
                 (!certificate && percent === 0) ? <h3 className=''>Coming Soon!!!</h3> : null
             }
