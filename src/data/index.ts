@@ -1,4 +1,3 @@
-import { IconType } from "react-icons";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { TfiInstagram } from "react-icons/tfi";
 import { PiGithubLogoFill, PiWhatsappLogoLight } from "react-icons/pi";
@@ -55,29 +54,17 @@ import bezahlbare from "../assets/img/proj/bezahlbare-Wohnungen.png";
 import feinheit from "../assets/img/proj/feinheit.png";
 import fcz from "../assets/img/proj/fcz.png";
 
+import front_meta from "../assets/img/front_cert.png";
+
 import udemy from "../assets/img/udemy-logo.png";
 import meta from "../assets/img/meta-logo.png";
+import ibm from "../assets/img/ibm-logo.png";
+import google from "../assets/img/google-logo_full.png";
+import metaWhite from "../assets/img/meta-logo_white.png";
 import freecodecamp from "../assets/img/freecodecamp-logo.png";
 import { TbBrandFramerMotion } from "react-icons/tb";
+import { IskillCards, MajorCertificate, SocialMedia } from "../types";
 
-
-interface SocialMedia {
-  title: string;
-  link: string;
-  icon: IconType; // Correct type annotation for the icon property
-}
-
-export interface Tech {
-  icon: IconType;
-  name: string;
-  color?: string;
-}
-
-interface IskillCards {
-  title: string;
-  cardColor: string;
-  techs: Tech[];
-}
 
 export const header = {
   name: "Paulo Ricardo Lopes Reizinho",
@@ -158,6 +145,148 @@ export const degrees = {
   ],
   id: "111",
 };
+
+export const MajorCertificates: MajorCertificate[] = [
+  {
+    title: "Front-End Developer",
+    logo: metaWhite,
+    certificate: front_meta,
+    percent: 100,
+    certLink: 'https://www.coursera.org/account/accomplishments/professional-cert/P5WVRUQLYDRN',
+    courseStatus: "Finished 05/2024",
+    type: "Meta Professional Certificate - 9 courses",
+    courses: [
+      {
+        title: "Introduction to Front-End Development",
+        skills: ['Web Development Tools','HTML and CSS','Responsive Web Design','Front-End Web Development','User Interface']
+      },
+      {
+        title: "Programming with JavaScript",
+        skills: ['Test-Driven Development','JavaScript','Front-End Web Development','Object-Oriented Programming (OOP)']
+      },
+      {
+        title: "Version Control",
+        skills: ['Version Control','Github','Bash (Unix Shell)','Web Development','Linux']
+      },
+      {
+        title: "HTML and CSS in depth",
+        skills: ['HTML and CSS','React (Web Framework)','Debugging','JavaScript','User Interface']
+      },
+      {
+        title: "React Basics",
+        skills: ['React (Web Framework)','Application development','Web Application','Front-End Web Development']
+      },
+      {
+        title: "Advanced React",
+        skills: ['Unit Testing','React (Web Framework)','Front-End Web Development','React Hooks']
+      },
+      {
+        title: "Principles of UX/UI Design",
+        skills: ['Web Design','Accessibility','Front-End Web Development','User Experience(UX)','User Interface(UI)', 'Figma']
+      },
+      {
+        title: "Front-End Developer Capstone",
+        skills: ['React (Web Framework)','JavaScript','Front-End Web Development','UI&UX','Unit Testing']
+      },
+      {
+        title: "Coding Interview Preparation",
+        skills: ['Data Structure','Computer Science','Algorithms','Communication','Pseudocode']
+      },
+    ]
+  },
+  {
+    title: "Back-End Developer",
+    logo: metaWhite,
+    certificate: '',
+    percent: 70,
+    certLink: '',
+    courseStatus: "In Progress",
+    type: "Meta Professional Certificate - 9 courses",
+    courses: [
+      {
+        title: "Introduction to Back-End Development",
+        skills: ['HTML&CSS','UI Frameworks','Web Development Tools','Databases','Backend Development']
+      },
+      {
+        title: "Programming in Python",
+        skills: ['Python','Algorithms','Data Structures','Application Programming Interfaces (API)','Cloud Hosting']
+      },
+      {
+        title: "Version Control",
+        skills: ['Version Control','Github','Bash (Unix Shell)','Web Development','Linux']
+      },
+      {
+        title: "Introduction to Databases for Back-End Development",
+        skills: ['database administration','MySQL','Database (DBMS)']
+      },
+      {
+        title: "Django Web Framework",
+        skills: ['Django (Web Framework)','Build a data model','API endpoints','Design a web application']
+      },
+      {
+        title: "APIs",
+        skills: ['Filtering and ordering','Serializers and deserializers','Authentication and authorization','Debugging','REST APIs']
+      },
+      {
+        title: "The Full Stack",
+        skills: ['Django (Web Framework)','HTML&CSS','Production environments','JavaScript',]
+      },
+      {
+        title: "Back-End Developer Capstone",
+        skills: ['Django (Web Framework)','API endpoints','MySQL','Testing','Web Security']
+      },
+      {
+        title: "Coding Interview Preparation",
+        skills: ['Data Structure','Computer Science','Algorithms','Communication','Pseudocode']
+      },
+    ]
+  },
+  {
+    title: "DevOps and Software Engineering",
+    logo: ibm,
+    certificate: '',
+    percent: 0,
+    certLink: '',
+    courseStatus: "Planned",
+    type: "IBM Professional Certificate - 14 courses",
+    courses: [
+      {
+        title: "",
+        skills: []
+      },
+    ]
+  },
+  {
+    title: "Cybersecurity",
+    logo: google,
+    certificate: '',
+    percent: 0,
+    certLink: '',
+    courseStatus: "Planned",
+    type: "Google Professional Certificate - 8 courses",
+    courses: [
+      {
+        title: "",
+        skills: []
+      },
+    ]
+  },
+  {
+    title: "Digital Marketing & E-commerce",
+    logo: google,
+    certificate: '',
+    percent: 0,
+    certLink: '',
+    courseStatus: "Planned",
+    type: "Google Professional Certificate - 7 courses",
+    courses: [
+      {
+        title: "",
+        skills: []
+      },
+    ]
+  },
+]
 
 export const certifications = [
   {
@@ -312,7 +441,7 @@ export const certifications = [
     title: "Meta Front-End Developer",
     school: "Meta",
     image: meta,
-    link: "https://drive.google.com/file/d/1GY4oqF6ecoILEnhoa0wgPPC0AJFPA9lK/view?usp=drive_link",
+    link: "https://www.coursera.org/account/accomplishments/professional-cert/P5WVRUQLYDRN",
     language: "",
     tags: "",
     showSkills: false,

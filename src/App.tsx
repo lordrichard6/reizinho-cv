@@ -3,15 +3,14 @@
 // import { Link } from 'react-scroll';
 
 import './globals.scss'
-import { certifications, socialMedia, contact, skills, workExp, projects, degrees } from './data'
+import { certifications, socialMedia, contact, skills, workExp, projects, degrees, MajorCertificates } from './data'
 
 import paulo_header from './assets/img/paulo_main.png'
 import SkillCard from "./components/SkillCard";
 import TimelineItem from "./components/TimeLineItem";
 import ProjectCard from "./components/ProjectCard";
 import EducationCard from "./components/EducationCard";
-
-
+import BestCertificates from './components/BestCertificates';
 
 const App: React.FC = () => {
 
@@ -53,9 +52,9 @@ const App: React.FC = () => {
 
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-2">
-              {contact.map((item) => {
+              {contact.map((item, i) => {
                 return (
-                  <a className='flex itens-center standart-animation hover:underline' href={item.link}><item.icon className='text-2xl mr-3 my-auto' /><h4 key={item.contact}>{item.contact}</h4></a>
+                  <a className='flex itens-center standart-animation hover:underline' key={i} href={item.link}><item.icon className='text-2xl mr-3 my-auto' /><h4 key={item.contact}>{item.contact}</h4></a>
                 )
               })}
             </div>
@@ -92,17 +91,37 @@ const App: React.FC = () => {
             />
           </div>
 
-          <div className="certificates flex-centered flex-col h-full">
+          <div className="certificates flex-centered flex-col h-full w-full">
             <div className="flex-centered gap-2">
               <hr className='w-20 lg:w-40' />
               <h2>Certificates</h2>
               <hr className='w-20 lg:w-40' />
             </div>
             <p className='mt-8'>Here I gather all my certifications achieved over the years of study related to Software Engineering and developemnt, done in online platforms such as Coursera, Udemy and FreeCodeCamp.</p>
+            <div className="certificates-highlights max-w-[1040px] w-full my-4">
+              <div className="flex items-center gap-2 my-4">
+                <h2>Major Certificates</h2>
+                <hr className='w-40 lg:w-64' />
+              </div>
+              {MajorCertificates.map((cert) => (
+                <BestCertificates
+                  key={cert.title}
+                  title={cert.title}
+                  certificate={cert.certificate}
+                  certLink={cert.certLink}
+                  logo={cert.logo}
+                  type={cert.type}
+                  courseStatus={cert.courseStatus}
+                  courses={cert.courses}
+                  percent={cert.percent}
+                />
+              ))}
+            </div>
             <div className="grid lg:grid-cols-4 gap-4 mt-10">
               {certifications.map((data) => {
                 return (
                   <EducationCard
+                    key={data.id}
                     id={data.id}
                     title={data.title}
                     skills={data.skills}
