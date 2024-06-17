@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { TySkillCard } from '../types';
-import { Tech } from '../data';
+import { Tech, TySkillCard } from '../types';
 import { motion } from 'framer-motion';
 import { TiArrowBack } from "react-icons/ti";
 

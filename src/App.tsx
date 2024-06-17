@@ -19,6 +19,7 @@ const App: React.FC = () => {
   // }
   const progLang = [
     skills[0].techs.find(tech => tech.name === "Javascript"),
+    skills[0].techs.find(tech => tech.name === "Typescript"),
     skills[1].techs.find(tech => tech.name === "Python"),
   ];
   const progFra = [

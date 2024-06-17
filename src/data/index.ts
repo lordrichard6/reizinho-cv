@@ -687,7 +687,7 @@ export const skills: IskillCards[] = [
       { icon: AiOutlineHtml5, name: "HTML", color: "" },
       { icon: FaCss3Alt, name: "CSS", color: "" },
       { icon: SiJavascript, name: "Javascript", color: "text-[#FFBF00]" },
-      { icon: SiTypescript, name: "Typescript", color: "" },
+      { icon: SiTypescript, name: "Typescript", color: "text-[#3174BF]" },
       { icon: SiJquery, name: "JQuery", color: "" },
       { icon: SiReact, name: "React", color: "text-[#0E46A3]" },
       { icon: SiNextdotjs, name: "Next.js", color: "text-[#151515]" },
