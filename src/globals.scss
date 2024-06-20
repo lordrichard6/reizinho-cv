@@ -226,6 +226,9 @@
     --primary: #879EAD;
     --secondary: #EEECE3;
     --size: 300px;
+    @media only screen and (max-width: 767px) {
+      --size: 200px;
+    }
     animation: progress 2s 0.5s forwards;
     width: var(--size);
     aspect-ratio: 1;
@@ -246,7 +249,7 @@
     background: conic-gradient(var(--primary) calc(var(--percentage) * 1%), var(--secondary) 0);
     mask: radial-gradient(white 55%, transparent 0);
     mask-mode: alpha;
-    -webkit-mask: radial-gradient(#0000 55%, #000 0);
+    -webkit-mask: radial-gradient(#0000 50%, #000 0);
     -webkit-mask-mode: alpha;
   }
   

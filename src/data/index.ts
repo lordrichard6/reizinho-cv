@@ -153,7 +153,7 @@ export const MajorCertificates: MajorCertificate[] = [
     certificate: front_meta,
     percent: 100,
     certLink: 'https://www.coursera.org/account/accomplishments/professional-cert/P5WVRUQLYDRN',
-    courseStatus: "Finished 05/2024",
+    courseStatus: "Finished 05/2024 ✅",
     type: "Meta Professional Certificate - 9 courses",
     courses: [
       {
@@ -198,9 +198,9 @@ export const MajorCertificates: MajorCertificate[] = [
     title: "Back-End Developer",
     logo: metaWhite,
     certificate: '',
-    percent: 70,
+    percent: 75,
     certLink: '',
-    courseStatus: "In Progress",
+    courseStatus: "In Progress 🐌",
     type: "Meta Professional Certificate - 9 courses",
     courses: [
       {
@@ -245,9 +245,9 @@ export const MajorCertificates: MajorCertificate[] = [
     title: "DevOps and Software Engineering",
     logo: ibm,
     certificate: '',
-    percent: 0,
+    percent: 1,
     certLink: '',
-    courseStatus: "Planned",
+    courseStatus: "In Progress 🐌",
     type: "IBM Professional Certificate - 14 courses",
     courses: [
       {

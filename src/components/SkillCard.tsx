@@ -18,10 +18,10 @@ const SkillCard: React.FC<TySkillCard> = ({ cardColor, cardType, title, techs })
             </div>
             <div ref={constraintsRef} className={`card-face back flex-centered rounded-lg p-10 relative ${cardColor}`}>
                 <TiArrowBack onClick={handleButtonClick} className='absolute top-0 right-0 text-6xl cursor-pointer' />
-                <motion.div className="flex-centered flex-wrap relative">
+                <motion.div className="grid grid-cols-3 gap-2 place-items-center">
                     {techs.map((tech: Tech) => {
                         return (
-                            <motion.div drag dragElastic={0.2} dragConstraints={constraintsRef} className='text-4xl border-solid border-2 text-slate-50 rounded-xl p-2 m-1 cursor-pointer' key={tech.name}>
+                            <motion.div className={`${tech.color ? tech.color : 'text-slate-50'} text-2xl lg:text-4xl border-slate-50 border-solid border-2 rounded-xl p-2 cursor-pointer`} key={tech.name}>
                                 <tech.icon />
                             </motion.div>)}
                         )
