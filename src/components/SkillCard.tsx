@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import { Tech, TySkillCard } from '../types';
 import { motion } from 'framer-motion';
 import { TiArrowBack } from "react-icons/ti";
+import { Tooltip } from 'react-tooltip';
 
 const SkillCard: React.FC<TySkillCard> = ({ cardColor, cardType, title, techs }) => {
     const constraintsRef = useRef(null)
@@ -21,8 +22,9 @@ const SkillCard: React.FC<TySkillCard> = ({ cardColor, cardType, title, techs })
                 <motion.div className="grid grid-cols-3 gap-2 place-items-center">
                     {techs.map((tech: Tech) => {
                         return (
-                            <motion.div className={`${tech.color ? tech.color : 'text-slate-50'} text-2xl lg:text-4xl border-slate-50 border-solid border-2 rounded-xl p-2 cursor-pointer`} key={tech.name}>
+                            <motion.div data-tooltip-id={tech.name} data-tooltip-content={tech.name} className={`${tech.color ? tech.color : 'text-slate-50'} text-2xl lg:text-4xl border-slate-50 border-solid border-2 rounded-xl p-2 cursor-pointer`} key={tech.name}>
                                 <tech.icon />
+                                <Tooltip id={tech.name} />
                             </motion.div>)}
                         )
                     }
