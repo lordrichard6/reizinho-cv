@@ -198,7 +198,7 @@ export const MajorCertificates: MajorCertificate[] = [
     title: "Back-End Developer",
     logo: metaWhite,
     certificate: '',
-    percent: 75,
+    percent: 67,
     certLink: '',
     courseStatus: "In Progress 🐌",
     type: "Meta Professional Certificate - 9 courses",
